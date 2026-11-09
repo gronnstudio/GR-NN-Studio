@@ -1,0 +1,138 @@
+/* Voorpagina */
+
+/* 00 Opening */
+.opening { padding-top: clamp(20px, 4vw, 48px); }
+.opening-regel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 2em;
+  padding-bottom: 14px;
+  margin-bottom: clamp(40px, 7vw, 112px);
+  border-bottom: 1px solid var(--lijn);
+}
+.opening-kop .masker:nth-child(3) { color: var(--inkt-zacht); }
+@media (min-width: 1024px) {
+  /* een trap: elke regel heel, zo groot als de breedte toelaat */
+  .opening-kop {
+    text-wrap: nowrap;
+    font-size: min(9rem, calc((min(100vw, 1440px) - 2 * var(--goot)) / 11.4));
+  }
+  .opening-kop .masker:nth-child(2) { padding-left: 0.5em; }
+  .opening-kop .masker:nth-child(3) { padding-left: 1em; }
+}
+.opening-onder { display: grid; gap: var(--blok); margin-top: clamp(40px, 7vw, 104px); }
+.opening-tekst { display: grid; gap: 32px; align-content: end; }
+@media (min-width: 768px) {
+  .opening-onder { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); }
+  .opening-beeld { grid-column: 1 / span 5; }
+  .opening-tekst { grid-column: 7 / -1; padding-bottom: 36px; }
+}
+@media (min-width: 1024px) {
+  .opening-beeld { grid-column: 2 / span 4; }
+  .opening-tekst { grid-column: 7 / span 5; }
+}
+
+/* 01 Index */
+.index { border-top: 1px solid var(--inkt); }
+.index li { border-bottom: 1px solid var(--lijn); }
+.index-regel {
+  display: grid;
+  grid-template-columns: 2.6em 1fr auto;
+  grid-template-areas: "nr naam pijl" ". delen delen" ". zin zin";
+  gap: 8px 0;
+  padding: 26px 0 30px;
+}
+.index-nr { grid-area: nr; padding-top: 0.9em; }
+.index-naam {
+  grid-area: naam;
+  font-family: var(--letter-kop);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 1rem + 6.4vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  transition: transform 400ms var(--ease), color 300ms;
+}
+.index-delen { grid-area: delen; }
+.index-zin { grid-area: zin; max-width: 30ch; font-size: var(--t-lead); line-height: 1.4; }
+.index-pijl {
+  grid-area: pijl;
+  align-self: center;
+  font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+  transition: transform 400ms var(--ease), color 300ms;
+}
+.index-regel:hover .index-naam, .index-regel:focus-visible .index-naam { transform: translateX(0.1em); }
+.index-regel:hover .index-pijl, .index-regel:focus-visible .index-pijl { transform: translateX(8px); color: var(--oranje-tekst); }
+@media (min-width: 1024px) {
+  .index-regel {
+    grid-template-columns: 4em minmax(0, 6fr) minmax(0, 4fr) 4em;
+    grid-template-areas: "nr naam zin pijl" "nr naam delen pijl";
+    column-gap: var(--goot);
+    align-items: center;
+    padding: 40px 0;
+  }
+  .index-nr { align-self: start; padding-top: 1.6em; }
+  .index-zin { align-self: end; }
+  .index-delen { align-self: start; }
+  .index-pijl { justify-self: end; }
+}
+
+/* 02 Observatie */
+.observatie { margin-top: var(--sectie); }
+.observatie-binnen { display: grid; gap: var(--blok); padding-top: var(--sectie); padding-bottom: var(--sectie); }
+.observatie-tekst { display: grid; gap: 28px; align-content: start; }
+.observatie-tekst .sectiekop { margin-bottom: 0; }
+.observatie-lijst { border-top: 1px solid var(--lijn); }
+.observatie-lijst li {
+  display: grid;
+  grid-template-columns: 2.6em 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--lijn);
+  font-size: var(--t-klein);
+  line-height: 1.5;
+  color: var(--inkt-zacht);
+}
+.observatie-lijst .t-mono { padding-top: 0.25em; }
+.observatie-lijst strong { color: var(--inkt); font-weight: 600; }
+@media (min-width: 1024px) {
+  .observatie-binnen { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); }
+  .observatie-tekst { grid-column: 1 / span 4; position: sticky; top: 112px; align-self: start; }
+  .observatie-beeld { grid-column: 6 / -1; }
+}
+
+/* 03 Dossiers */
+.dossiers { display: grid; gap: var(--blok); margin-bottom: 24px; }
+.dossier-beeld img { transition: transform 900ms var(--ease); }
+.dossier-link:hover .dossier-beeld img { transform: scale(1.03); }
+.dossier-titel { margin-top: 8px; margin-bottom: 6px; transition: color 250ms; }
+.dossier-link:hover .dossier-titel { color: var(--oranje-tekst); }
+@media (min-width: 768px) {
+  .dossiers { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); }
+  .dossier:nth-child(1) { grid-column: 1 / span 7; }
+  .dossier:nth-child(2) { grid-column: 9 / -1; margin-top: clamp(80px, 14vw, 240px); }
+}
+
+/* 04 Stappen */
+.stappen { display: grid; gap: 0; border-top: 1px solid var(--inkt); }
+.stappen li { display: grid; gap: 10px; padding: 28px 0 32px; border-bottom: 1px solid var(--lijn); }
+.stap-kop { font-family: var(--letter-kop); font-weight: 700; font-size: var(--t-h3); line-height: 1.05; letter-spacing: -0.025em; }
+@media (min-width: 1024px) {
+  .stappen { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--goot); border-bottom: 1px solid var(--lijn); }
+  .stappen li { border-bottom: 0; padding-right: 8px; align-content: start; }
+  .stappen li + li { border-left: 1px solid var(--lijn); padding-left: var(--goot); margin-left: calc(-1 * var(--goot) / 2); }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .stappen { grid-template-columns: 1fr 1fr; column-gap: var(--goot); }
+}
+
+/* 05 Wie */
+.wie { display: grid; gap: var(--blok); }
+.wie-tekst { display: grid; gap: 28px; align-content: end; }
+.wie-tekst .sectiekop { margin-bottom: 0; }
+@media (min-width: 768px) {
+  .wie { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); align-items: end; }
+  .wie-beeld { grid-column: 1 / span 5; }
+  .wie-tekst { grid-column: 7 / -1; }
+}
+@media (min-width: 1024px) { .wie-beeld { grid-column: 1 / span 4; } }
