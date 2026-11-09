@@ -7,12 +7,15 @@ for (const pad of PAGINAS) {
     const fouten: string[] = []
     page.on("pageerror", (e) => fouten.push(e.message))
     page.on("console", (m) => { if (m.type() === "error" && !/Failed to load resource/.test(m.text())) fouten.push(m.text()) })
-    await page.setViewportSize({ width: 390, height: 844 })
-    const res = await page.goto(pad)
-    expect(res?.status()).toBe(200)
-    await expect(page.locator("h1")).toHaveCount(1)
-    const breed = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
-    expect(breed).toBeLessThanOrEqual(0)
+    for (const breedte of [320, 390]) {
+      await page.setViewportSize({ width: breedte, height: 844 })
+      const res = await page.goto(pad)
+      expect(res?.status()).toBe(200)
+      await page.evaluate(() => document.fonts.ready)
+      await expect(page.locator("h1")).toHaveCount(1)
+      const uit = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+      expect(uit, `${breedte}px`).toBeLessThanOrEqual(0)
+    }
     expect(fouten).toEqual([])
   })
 }

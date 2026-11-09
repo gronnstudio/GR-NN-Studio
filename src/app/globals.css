@@ -92,7 +92,7 @@ img { display: block; max-width: 100%; }
 .t-h1 { font-size: var(--t-h1); line-height: 0.92; letter-spacing: -0.04em; }
 .t-h2 { font-size: var(--t-h2); line-height: 0.96; letter-spacing: -0.035em; max-width: 16ch; }
 /* een heel lang woord mag op een smal scherm nooit uit beeld lopen */
-.t-display, .t-h1, .t-h2, .t-h3 { overflow-wrap: break-word; hyphens: manual; }
+.t-display, .t-h1, .t-h2, .t-h3 { overflow-wrap: anywhere; hyphens: manual; }
 .t-h3 { font-size: var(--t-h3); line-height: 1.04; letter-spacing: -0.025em; max-width: 22ch; }
 .t-lead { font-size: var(--t-lead); line-height: 1.45; letter-spacing: -0.005em; max-width: 34ch; }
 .t-tekst { max-width: 60ch; }
@@ -234,13 +234,13 @@ img { display: block; max-width: 100%; }
 .feiten { border-top: 1px solid var(--lijn); }
 .feiten > div {
   display: grid;
-  grid-template-columns: minmax(8em, 38%) 1fr;
+  grid-template-columns: minmax(7em, 38%) minmax(0, 1fr);
   gap: 1em;
   padding: 12px 0;
   border-bottom: 1px solid var(--lijn);
 }
 .feiten dt { color: var(--inkt-zacht); padding-top: 0.2em; }
-.feiten dd { font-weight: 500; }
+.feiten dd { font-weight: 500; min-width: 0; overflow-wrap: anywhere; }
 
 /* ── Beweging ───────────────────────────────────────────────────────────── */
 

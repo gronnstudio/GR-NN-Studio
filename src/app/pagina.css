@@ -41,7 +41,12 @@
   padding: 18px 0;
   border-bottom: 1px solid var(--lijn);
 }
-.prijzen dt { display: grid; gap: 4px; }
+.prijzen dt { display: grid; gap: 4px; min-width: 0; overflow-wrap: break-word; }
+/* op een smal scherm staat het bedrag onder de naam, niet ernaast */
+@media (max-width: 479px) {
+  .prijzen > div { grid-template-columns: 1fr; }
+  .prijzen-bedrag { grid-row: 2; }
+}
 .prijzen-wat { font-weight: 600; }
 .prijzen-bedrag {
   font-family: var(--letter-mono);
@@ -69,7 +74,7 @@
 .dossierregel-tekst { display: grid; gap: 20px; align-content: start; }
 .dossierregel-beeld img { transition: transform 900ms var(--ease); }
 .dossierregel:hover .dossierregel-beeld img { transform: scale(1.03); }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .dossierregel { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); align-items: start; }
   .dossierregel-beeld { grid-column: 1 / span 6; }
   .dossierregel-tekst { grid-column: 8 / -1; padding-top: 8px; }
@@ -127,6 +132,7 @@
 
 /* Kennismaken */
 .kennis { display: grid; gap: var(--blok); }
+.kennis > *, .juridisch-tekst > * { min-width: 0; }
 @media (min-width: 1024px) {
   .kennis { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); }
   .formulier { grid-column: 1 / span 7; }
@@ -183,7 +189,7 @@
 .juridisch-inhoud li a:hover { color: var(--oranje-tekst); }
 .juridisch-tekst { display: grid; gap: 48px; max-width: 68ch; }
 .juridisch-tekst section { display: grid; gap: 12px; scroll-margin-top: 112px; }
-.juridisch-tekst h2 { display: grid; gap: 8px; font-family: var(--letter-kop); font-weight: 700; font-size: clamp(1.3rem, 1rem + 0.8vw, 1.75rem); line-height: 1.15; letter-spacing: -0.02em; }
+.juridisch-tekst h2 { overflow-wrap: anywhere; display: grid; gap: 8px; font-family: var(--letter-kop); font-weight: 700; font-size: clamp(1.3rem, 1rem + 0.8vw, 1.75rem); line-height: 1.15; letter-spacing: -0.02em; }
 @media (min-width: 1024px) {
   .juridisch { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--goot); }
   .juridisch-inhoud { grid-column: 1 / span 4; position: sticky; top: 112px; align-self: start; max-height: calc(100vh - 140px); overflow-y: auto; }
