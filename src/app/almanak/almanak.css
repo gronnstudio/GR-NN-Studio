@@ -81,8 +81,9 @@
   margin: clamp(16px, 2.4vw, 32px) 0 0 -0.04em;
   white-space: nowrap;
 }
+.alm-maand { overflow: clip; }
 .alm-maand-woord { display: block; overflow: clip; padding: 0.04em 0 0.06em; }
-.alm-maand-woord > span { display: inline-block; }
+.alm-maand-binnen, .alm-maand-binnen > span { display: inline-block; }
 
 .alm-omslag-raster {
   display: grid;
@@ -307,7 +308,7 @@
 
 /* ── Beweging ─────────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: no-preference) {
-  .alm-maand-woord > span { animation: alm-op 1000ms var(--ease) both; animation-delay: calc(80ms + var(--i) * 45ms); }
+  .alm-maand-binnen > span { animation: alm-op 1000ms var(--ease) both; animation-delay: calc(80ms + var(--i) * 45ms); }
   .alm-omslag-raster { animation: alm-vaag 900ms var(--ease) 500ms both; }
   .alm-blad-open { animation: alm-blad 420ms var(--ease) both; }
   @supports (animation-timeline: view()) {

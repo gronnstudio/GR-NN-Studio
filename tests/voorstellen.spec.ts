@@ -58,8 +58,10 @@ test("almanak: de maand op het omslag past op elke breedte", async ({ page }) =>
     await page.setViewportSize({ width: breedte, height: 900 })
     await page.goto("/almanak", { waitUntil: "domcontentloaded" })
     await page.evaluate(() => document.fonts.ready)
-    const r = await page.locator(".alm-maand-woord").evaluate((el) => ({ w: el.scrollWidth, c: el.clientWidth }))
+    // het woord vult de breedte: niet breder dan de kolom, en ook niet veel smaller
+    const r = await page.locator(".alm-maand-binnen").evaluate((el) => ({ w: el.getBoundingClientRect().width, c: el.parentElement!.clientWidth }))
     expect(r.w, `${breedte}px`).toBeLessThanOrEqual(r.c + 1)
+    expect(r.w, `${breedte}px`).toBeGreaterThan(r.c * 0.9)
   }
 })
 

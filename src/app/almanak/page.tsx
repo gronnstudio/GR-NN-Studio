@@ -8,6 +8,7 @@ import { dezeMaand, volgendeMaand } from "@/lib/seizoen"
 import { SITE, whatsappMet } from "@/lib/site"
 import { VAKKEN } from "@/lib/vakken"
 import { Inhoud } from "./inhoud"
+import { Maand } from "./maand"
 import "./almanak.css"
 
 // Voorstel A · Almanak. De site verschijnt als een maandblad over de tuin:
@@ -56,13 +57,7 @@ export default function Almanak() {
       <main>
         {/* Omslag */}
         <section id="omslag" className="alm-omslag" aria-labelledby="alm-maand">
-          <h1 id="alm-maand" className="alm-maand" style={{ "--b": m.breedte } as CSSProperties}>
-            <span className="sr-only">GRØNN Studio, almanak van </span>
-            <span className="alm-maand-woord" aria-hidden="true">
-              {[...groot(m.naam)].map((l, i) => <span key={i} style={{ "--i": i } as CSSProperties}>{l}</span>)}
-            </span>
-            <span className="sr-only">{m.naam} {m.jaar}</span>
-          </h1>
+          <Maand woord={groot(m.naam)} breedte={m.breedte} />
 
           <div className="alm-omslag-raster">
             <div className="alm-deze-maand">
