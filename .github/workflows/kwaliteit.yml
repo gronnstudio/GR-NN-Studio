@@ -1,0 +1,29 @@
+name: kwaliteit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: kwaliteit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  controle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit
+      - run: npx eslint src tests
+      - run: npx next build
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test
+        env:
+          CI: "1"

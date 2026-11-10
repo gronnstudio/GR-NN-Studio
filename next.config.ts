@@ -1,0 +1,20 @@
+import type { NextConfig } from "next"
+
+const config: NextConfig = {
+  // Alleen WebP: AVIF is iets kleiner, maar het eerste verzoek per maat duurt
+  // veel langer om te maken. Voor een site met veel foto's weegt snelheid zwaarder.
+  images: { formats: ["image/webp"] },
+  async headers() {
+    return [{
+      source: "/:pad*",
+      headers: [
+        { key: "X-Content-Type-Options", value: "nosniff" },
+        { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        { key: "X-Frame-Options", value: "DENY" },
+        { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+      ],
+    }]
+  },
+}
+
+export default config
