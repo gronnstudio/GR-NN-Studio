@@ -24,8 +24,15 @@ for (const pad of PAGINAS) {
       expect(res?.status()).toBe(200)
       await page.evaluate(() => document.fonts.ready)
       await expect(page.locator("h1")).toHaveCount(1)
-      const uit = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
-      expect(uit, `${breedte}px`).toBeLessThanOrEqual(0)
+      const { uit, wie } = await page.evaluate(() => ({
+        uit: document.documentElement.scrollWidth - window.innerWidth,
+        // bij een fout: welke elementen steken uit, zodat CI zegt wat er mis is
+        wie: [...document.querySelectorAll("body *")]
+          .filter((e) => e.getBoundingClientRect().right > window.innerWidth + 1)
+          .slice(0, 5)
+          .map((e) => `${e.tagName.toLowerCase()}.${e.className} "${(e.textContent ?? "").trim().slice(0, 40)}" ${Math.round(e.getBoundingClientRect().right)}`),
+      }))
+      expect(uit, `${breedte}px · ${wie.join(" | ")}`).toBeLessThanOrEqual(0)
     }
     expect(fouten).toEqual([])
   })
