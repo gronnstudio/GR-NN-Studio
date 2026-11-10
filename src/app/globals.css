@@ -37,3 +37,6 @@ img { display: block; max-width: 100%; }
 .foto img { object-fit: cover; }
 .overslaan { position: fixed; left: 16px; top: 12px; z-index: 100; padding: 12px 16px; background: var(--antraciet); color: var(--creme); transform: translateY(-200%); }
 .overslaan:focus { transform: none; }
+
+/* Lange Nederlandse samenstellingen breken af in plaats van uit te steken. */
+h2, h3 { overflow-wrap: break-word; hyphens: auto; }
