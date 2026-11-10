@@ -1,0 +1,224 @@
+/* Voorstel B · Tuinkamers. Antraciet is de muur, crème is de opening. Elke
+   kamer heeft een opening met een eigen vorm; drempels scheiden de kamers.
+   Oranje alleen voor de actie. */
+
+.tk {
+  --muur: #1a1a18;
+  --licht: #f3eee4;
+  --op-muur: #ede8dd;
+  --zacht: #aaa497;
+  --steen: #3a3934;
+  --g: clamp(20px, 3.6vw, 52px);
+  --kamer: clamp(72px, 10vw, 160px);
+  --rand-opening: clamp(8px, 1vw, 14px);
+  background: var(--muur);
+  color: var(--op-muur);
+}
+.tk-mono { font-family: var(--letter-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.4; }
+.tk-zacht { color: var(--zacht); }
+.tk-h1, .tk-h2, .tk-h3, .tk-buiten-kop { font-family: var(--letter-kop); font-weight: 700; text-wrap: balance; }
+.tk-h1 { font-size: clamp(3rem, 1rem + 7.8vw, 9rem); line-height: 0.86; letter-spacing: -0.05em; }
+.tk-h1 span { display: inline-block; }
+.tk-h2 { font-size: clamp(2rem, 1rem + 3.6vw, 4.5rem); line-height: 0.96; letter-spacing: -0.035em; max-width: 15ch; }
+.tk-h3 { font-size: clamp(1.4rem, 1rem + 1.4vw, 2.2rem); line-height: 1.05; letter-spacing: -0.025em; max-width: 20ch; margin-top: 8px; }
+.tk-lead { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem); line-height: 1.5; max-width: 34ch; color: var(--zacht); }
+.tk p { max-width: 52ch; }
+
+.tk-knop {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 22px; border-radius: 999px; border: 1px solid transparent;
+  font-weight: 600; font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+  transition: background-color 200ms, color 200ms, border-color 200ms, transform 200ms var(--ease);
+}
+.tk-knop:active { transform: scale(0.97); }
+.tk-knop-vol { background: var(--oranje); color: var(--muur); }
+.tk-knop-vol:hover { background: var(--licht); }
+.tk-knop-lijn { border-color: #57564f; color: var(--op-muur); }
+.tk-knop-lijn:hover { border-color: var(--op-muur); }
+.tk-knop-donker { background: var(--muur); color: var(--licht); }
+.tk-knop-donker:hover { background: var(--oranje); color: var(--muur); }
+.tk-knop-lijn-donker { border-color: var(--muur); color: var(--muur); }
+.tk-knop-lijn-donker:hover { background: var(--muur); color: var(--licht); }
+.tk-knoppen { display: flex; flex-wrap: wrap; gap: 10px; }
+.tk-link { display: inline-flex; min-height: 44px; align-items: center; font-weight: 600; border-bottom: 1px solid currentColor; }
+.tk-link:hover { color: var(--oranje); }
+.tk-prijs { display: flex; align-items: baseline; gap: 14px; margin-top: 20px; font-family: var(--letter-kop); font-size: 1.5rem; letter-spacing: -0.02em; }
+.tk-prijs .tk-mono { color: var(--zacht); }
+
+/* ── Kop ──────────────────────────────────────────────────────────────── */
+.tk-kop {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; gap: 24px;
+  min-height: 64px; padding: 0 var(--g);
+  background: var(--muur);
+  border-bottom: 1px solid var(--steen);
+}
+.tk-merk img { height: 20px; width: auto; }
+.tk-nav { display: none; margin-left: auto; }
+.tk-nav ul { display: flex; gap: 2px; }
+.tk-nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px;
+  font-weight: 500; font-size: 0.875rem; color: var(--zacht);
+  transition: color 200ms;
+}
+.tk-nav a:hover { color: var(--op-muur); }
+.tk-kop-start { display: none; }
+@media (min-width: 1024px) {
+  .tk-kop { min-height: 76px; }
+  .tk-nav { display: block; }
+  .tk-kop-start { display: inline-flex; }
+}
+
+/* ── De opening: crème kader om een foto ─────────────────────────────── */
+.tk-opening { background: var(--licht); padding: var(--rand-opening); }
+.tk-opening figcaption, .tk-opening + figcaption { color: #57524a; padding-top: var(--rand-opening); }
+.tk-opening-beeld { overflow: hidden; }
+.tk-opening-beeld .foto { background: #d8cfbf; }
+
+/* ── 01 Entree ────────────────────────────────────────────────────────── */
+.tk-entree { display: grid; gap: 40px; padding: clamp(32px, 6vw, 96px) var(--g) var(--kamer); }
+.tk-entree-tekst { display: grid; gap: 24px; align-content: end; }
+@media (min-width: 900px) {
+  .tk-entree { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: end; min-height: calc(100svh - 76px); }
+  .tk-entree-tekst { grid-column: 1 / span 7; padding-bottom: 8px; }
+  .tk-opening-entree { grid-column: 8 / -1; transform-origin: 100% 100%; }
+}
+
+/* ── Drempel ──────────────────────────────────────────────────────────── */
+.tk-drempel { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px; padding: 0 var(--g); color: var(--zacht); }
+.tk-drempel-steen { height: 7px; border-top: 1px solid var(--steen); border-bottom: 1px solid var(--steen); }
+
+/* ── Kamers ───────────────────────────────────────────────────────────── */
+.tk-kamer { padding: clamp(32px, 4vw, 56px) var(--g) var(--kamer); scroll-margin-top: 64px; }
+.tk-kamer-tekst { display: grid; gap: 20px; align-content: start; }
+.tk-twee { margin-top: clamp(32px, 4vw, 56px); }
+@media (min-width: 900px) {
+  .tk-twee { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+  .tk-twee > :first-child { grid-column: 1 / span 6; }
+  .tk-twee > :last-child { grid-column: 8 / -1; }
+}
+
+/* 03 Binnenplaats: een lichte kamer, tekst donker op crème */
+.tk-binnenplaats { background: var(--licht); color: var(--muur); padding: var(--rand-opening); display: grid; gap: var(--rand-opening); }
+.tk-binnenplaats-tekst { display: grid; gap: 18px; align-content: end; padding: clamp(20px, 3vw, 48px); }
+.tk-binnenplaats-tekst .tk-mono { color: #57524a; }
+.tk-binnenplaats .tk-prijs .tk-mono { color: #57524a; }
+@media (min-width: 900px) {
+  .tk-binnenplaats { grid-template-columns: 1fr 1fr; min-height: 80svh; }
+  .tk-binnenplaats .tk-opening-beeld, .tk-binnenplaats .foto { height: 100%; aspect-ratio: auto !important; }
+}
+
+/* 04 Doorgang: een smalle, hoge opening */
+.tk-aanleg { display: grid; gap: 40px; }
+.tk-opening-doorgang { width: min(100%, 360px); justify-self: end; }
+@media (min-width: 900px) {
+  .tk-aanleg { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: center; }
+  .tk-aanleg .tk-kamer-tekst { grid-column: 1 / span 6; }
+  .tk-opening-doorgang { grid-column: 9 / span 3; width: 100%; }
+}
+
+/* 05 Water: de opening groeit tot het hele scherm */
+.tk-water { padding-left: 0; padding-right: 0; }
+.tk-water .tk-kamer-tekst { padding: 0 var(--g); }
+.tk-opening-vol { margin: 0 var(--g); }
+@media (max-width: 899px) { .tk-opening-vol .foto { aspect-ratio: 4 / 5 !important; } }
+
+/* 06 Werk: twee deuren */
+.tk-werk-kop { margin-bottom: clamp(32px, 5vw, 72px); }
+.tk-deuren { display: grid; gap: 48px; }
+.tk-deur { display: grid; gap: 14px; }
+.tk-deur img { transition: transform 900ms var(--ease); }
+.tk-deur:hover img { transform: scale(1.05); }
+.tk-deur:hover .tk-h3 { color: var(--oranje); }
+@media (min-width: 900px) {
+  .tk-deuren { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+  .tk-deuren li:nth-child(1) { grid-column: 2 / span 4; }
+  .tk-deuren li:nth-child(2) { grid-column: 8 / span 4; margin-top: clamp(64px, 10vw, 160px); }
+}
+
+/* 07 Studio: een klein raam */
+.tk-studio { display: grid; gap: 40px; }
+.tk-opening-raam { width: min(70%, 300px); }
+@media (min-width: 900px) {
+  .tk-studio { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: center; }
+  .tk-opening-raam { grid-column: 2 / span 3; width: 100%; }
+  .tk-studio .tk-kamer-tekst { grid-column: 6 / -1; }
+}
+
+/* Prijzen in Water */
+.tk-prijzen { margin-top: 20px; border-top: 1px solid var(--steen); }
+.tk-prijzen > div { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--steen); }
+.tk-prijzen dt { color: var(--zacht); padding-top: 0.2em; }
+.tk-prijzen dd { font-family: var(--letter-kop); font-size: 1.15rem; letter-spacing: -0.01em; }
+
+/* ── Naar buiten ──────────────────────────────────────────────────────── */
+.tk-buiten {
+  display: grid; gap: 24px;
+  background: var(--licht); color: var(--muur);
+  padding: var(--kamer) var(--g) calc(var(--kamer) + 40px);
+  scroll-margin-top: 64px;
+}
+.tk-buiten > * { min-width: 0; }
+.tk-buiten > .tk-mono { color: #57524a; }
+.tk-buiten-kop { font-size: clamp(2.6rem, 1rem + 6.4vw, 8rem); line-height: 0.9; letter-spacing: -0.045em; max-width: 12ch; }
+.tk-buiten-zin { font-size: 1.15rem; color: #57524a; max-width: 40ch; }
+
+/* ── Voet ─────────────────────────────────────────────────────────────── */
+.tk-voet { display: grid; gap: 28px; padding: 56px var(--g) 120px; border-top: 1px solid var(--steen); }
+.tk-voet img { height: 20px; width: auto; margin-bottom: 14px; }
+.tk-voet ul a { display: inline-flex; min-height: 40px; align-items: center; }
+.tk-voet ul a:hover { color: var(--oranje); }
+.tk-voet-onder { display: flex; flex-wrap: wrap; gap: 0 20px; align-items: center; }
+.tk-voet-onder a { display: inline-flex; min-height: 40px; align-items: center; }
+@media (min-width: 900px) {
+  .tk-voet { grid-template-columns: 1fr 1fr; padding-bottom: 40px; }
+  .tk-voet-onder { grid-column: 1 / -1; border-top: 1px solid var(--steen); padding-top: 16px; }
+}
+
+/* ── Duimbalk ─────────────────────────────────────────────────────────── */
+.tk-duim {
+  position: fixed; z-index: 40; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom));
+  max-width: 420px; margin-inline: auto;
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 6px; padding: 6px;
+  border-radius: 999px; background: var(--muur); border: 1px solid var(--steen);
+}
+.tk-duim > * { width: 100%; }
+@media (min-width: 1024px) { .tk-duim { display: none; } }
+
+/* ── Kamermenu ────────────────────────────────────────────────────────── */
+.tk-blad { position: fixed; inset: 0; z-index: 60; overflow-y: auto; background: var(--muur); color: var(--op-muur); padding: 0 var(--g) 40px; }
+.tk-blad[hidden] { display: none; }
+.tk-blad-kop { display: flex; justify-content: space-between; align-items: center; min-height: 72px; }
+.tk-blad-lijst { border-top: 1px solid var(--steen); }
+.tk-blad-lijst li { border-bottom: 1px solid var(--steen); }
+.tk-blad-lijst a { display: grid; grid-template-columns: 56px 2.2em 1fr; align-items: center; gap: 12px; padding: 12px 0; min-height: 56px; }
+.tk-blad-vorm { display: flex; align-items: center; justify-content: center; height: 40px; }
+.tk-blad-vorm span { display: block; background: var(--licht); }
+.tk-blad-naam { font-family: var(--letter-kop); font-size: clamp(1.6rem, 1rem + 3vw, 2.8rem); letter-spacing: -0.03em; line-height: 1; }
+.tk-blad-lijst a:hover .tk-blad-naam { color: var(--oranje); }
+
+/* ── Beweging ─────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .tk-h1 span { animation: tk-op 900ms var(--ease) both; }
+  .tk-h1 span:nth-child(2) { animation-delay: 90ms; }
+  .tk-h1 span:nth-child(3) { animation-delay: 180ms; }
+  .tk-opening-entree { animation: tk-open 1100ms var(--ease) 200ms both; }
+  .tk-blad-open { animation: tk-vaag 300ms var(--ease) both; }
+  .tk-blad-open li { animation: tk-op 500ms var(--ease) both; }
+  @supports (animation-timeline: view()) {
+    /* binnenlopen: de foto in een opening komt van dichtbij naar zijn plek */
+    .tk-opening-beeld img { animation: tk-binnenlopen linear both; animation-timeline: view(); animation-range: entry 0% cover 45%; }
+    /* de opening van de waterkamer groeit tot het hele scherm */
+    .tk-opening-vol { animation: tk-groei linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    .tk-zie { animation: tk-binnen linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+  }
+}
+@keyframes tk-op { from { transform: translateY(40px); opacity: 0; } }
+@keyframes tk-vaag { from { opacity: 0; } }
+@keyframes tk-open { from { clip-path: inset(50% 0 50% 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes tk-binnenlopen { from { transform: scale(1.18); } to { transform: scale(1); } }
+@keyframes tk-groei { from { margin-inline: calc(var(--g) + 8vw); } to { margin-inline: 0; } }
+@keyframes tk-binnen { from { opacity: 0; transform: translateY(28px); } }
+
+/* Op de smalste telefoons mag een lange knoptekst breken */
+@media (max-width: 379px) { .tk-knop { white-space: normal; text-align: center; max-width: 100%; line-height: 1.25; padding-block: 10px; } }

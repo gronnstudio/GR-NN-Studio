@@ -1,0 +1,212 @@
+/* Voorstel C · Materiaal: een stalenboek. Crème als papier van het boek,
+   antraciet als plaat (beton). Stalen zijn vierkante uitsneden van echte
+   foto's; specificaties staan in mono. Oranje alleen voor de actie. */
+
+.mt {
+  --papier: #f3eee4;
+  --inkt: #1a1a18;
+  --zacht: #57524a;
+  --lijn: #cfc6b6;
+  --plaat: #1a1a18;
+  --g: clamp(20px, 3.6vw, 52px);
+  --sectie: clamp(96px, 12vw, 192px);
+  background: var(--papier);
+  color: var(--inkt);
+}
+.mt-mono { font-family: var(--letter-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.45; }
+.mt-zacht { color: var(--zacht); }
+.mt-zacht-licht { color: #aaa497; }
+.mt-h2 { font-family: var(--letter-kop); font-weight: 700; font-size: clamp(2rem, 1rem + 3.6vw, 4.5rem); line-height: 0.95; letter-spacing: -0.035em; max-width: 15ch; text-wrap: balance; }
+.mt-lead { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem); line-height: 1.5; max-width: 36ch; }
+.mt p { max-width: 54ch; }
+
+.mt-knop {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 0 22px; border-radius: 999px; border: 1px solid transparent;
+  font-weight: 600; font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+  transition: background-color 200ms, color 200ms, transform 200ms var(--ease);
+}
+.mt-knop:active { transform: scale(0.97); }
+.mt-knop-vol { background: var(--oranje); color: var(--inkt); }
+.mt-knop-vol:hover { background: var(--inkt); color: var(--papier); }
+.mt-knop-lijn { border-color: currentColor; }
+.mt-knop-lijn:hover { background: var(--inkt); color: var(--papier); }
+.mt-knop-lijn-licht { border-color: #57564f; color: var(--papier); }
+.mt-knoppen { display: flex; flex-wrap: wrap; gap: 10px; }
+.mt-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; border-bottom: 1px solid currentColor; justify-self: start; }
+.mt-link:hover { color: #b23e00; }
+
+/* ── Kop ──────────────────────────────────────────────────────────────── */
+.mt-kop { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: 24px; min-height: 64px; padding: 0 var(--g); background: var(--papier); border-bottom: 1px solid var(--lijn); }
+.mt-merk img { height: 20px; width: auto; }
+.mt-nav { display: none; margin-left: auto; }
+.mt-nav ul { display: flex; gap: 4px; }
+.mt-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; font-weight: 500; font-size: 0.9rem; }
+.mt-nav a:hover { color: #b23e00; }
+.mt-kop-start { display: none; }
+@media (min-width: 900px) {
+  .mt-kop { min-height: 76px; }
+  .mt-nav { display: block; }
+  .mt-kop-start { display: inline-flex; }
+}
+
+/* ── Stalen ───────────────────────────────────────────────────────────── */
+.mt-stalen { display: grid; gap: 32px; padding: clamp(24px, 4vw, 64px) var(--g) 0; }
+.mt-woorden {
+  font-family: var(--letter-kop);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 1rem + 8.4vw, 8.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+}
+.mt-woord { display: block; overflow: clip; width: max-content; transition: color 250ms, transform 350ms var(--ease); }
+.mt-woord > span { display: inline-block; }
+.mt-woord:hover, .mt-woord:focus-visible { color: #b23e00; transform: translateX(0.06em); }
+
+.mt-staalkaart { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.mt-staal { position: relative; scroll-margin-top: 96px; }
+.mt-staal .foto { transition: filter 350ms; }
+.mt-staal img { transition: transform 700ms var(--ease); }
+.mt-staal:first-child { grid-column: 1 / -1; }
+.mt-staal:first-child .foto, .mt-staal:last-child .foto { aspect-ratio: 2 / 1 !important; }
+.mt-staal:last-child { grid-column: 1 / -1; }
+.mt-staal-label { padding: 8px 0 4px; }
+.mt-staal:hover img { transform: scale(1.06); }
+
+/* Een woord aanwijzen licht zijn staal op; de rest wijkt */
+.mt-stalen:has(.mt-woord:hover) .mt-staal .foto { filter: grayscale(0.85) brightness(1.05) opacity(0.55); }
+.mt-stalen:has(.mt-woord[data-m="kei"]:hover) .mt-staal[data-m="kei"] .foto,
+.mt-stalen:has(.mt-woord[data-m="grind"]:hover) .mt-staal[data-m="grind"] .foto,
+.mt-stalen:has(.mt-woord[data-m="beton"]:hover) .mt-staal[data-m="beton"] .foto,
+.mt-stalen:has(.mt-woord[data-m="water"]:hover) .mt-staal[data-m="water"] .foto,
+.mt-stalen:has(.mt-woord[data-m="folie"]:hover) .mt-staal[data-m="folie"] .foto,
+.mt-stalen:has(.mt-woord[data-m="plant"]:hover) .mt-staal[data-m="plant"] .foto { filter: none; }
+
+.mt-stalen-onder { display: grid; gap: 24px; padding-top: 8px; }
+
+@media (min-width: 900px) {
+  .mt-stalen { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: start; }
+  .mt-woorden { grid-column: 1 / span 6; font-size: clamp(4rem, 1rem + 7.4vw, 9rem); }
+  .mt-staalkaart { grid-column: 7 / -1; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 12px; }
+  .mt-staal:first-child { grid-column: span 2; grid-row: span 2; }
+  .mt-staal:last-child { grid-column: auto; }
+  .mt-staal:first-child .foto, .mt-staal:last-child .foto { aspect-ratio: 1 / 1 !important; }
+  .mt-stalen-onder { grid-column: 1 / -1; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: end; border-top: 1px solid var(--inkt); padding-top: 28px; margin-top: 16px; }
+  .mt-stalen-onder .mt-lead { grid-column: 1 / span 6; }
+  .mt-stalen-onder .mt-knoppen { grid-column: 7 / -1; }
+}
+
+/* ── Secties ──────────────────────────────────────────────────────────── */
+.mt-sectie { padding: var(--sectie) var(--g) 0; scroll-margin-top: 64px; }
+.mt-sectiekop { display: grid; gap: 16px; margin-bottom: clamp(32px, 5vw, 64px); }
+
+/* Specificatie */
+.mt-spec { border-top: 2px solid var(--inkt); }
+.mt-spec-kop { display: none; }
+.mt-spec-rij { display: grid; gap: 8px; padding: 22px 0 24px; border-bottom: 1px solid var(--lijn); transition: background-color 200ms; }
+.mt-spec-vak { display: flex; gap: 14px; align-items: baseline; font-family: var(--letter-kop); font-size: clamp(1.5rem, 1rem + 1.6vw, 2.4rem); letter-spacing: -0.03em; line-height: 1; }
+.mt-spec-wat { color: var(--zacht); max-width: 48ch; }
+.mt-spec-mat { color: var(--inkt); }
+.mt-spec-prijs { font-family: var(--letter-mono); font-weight: 500; font-size: 0.95rem; }
+.mt-spec-rij:hover .mt-spec-vak { color: #b23e00; }
+.mt-voetnoot { margin-top: 16px; }
+@media (min-width: 1024px) {
+  .mt-spec-kop, .mt-spec-rij { display: grid; grid-template-columns: minmax(0, 3.2fr) minmax(0, 4fr) minmax(0, 3fr) minmax(0, 1.6fr); column-gap: var(--g); align-items: baseline; }
+  .mt-spec-kop { padding: 10px 0; border-bottom: 1px solid var(--inkt); color: var(--zacht); }
+  .mt-spec-prijs { text-align: right; }
+  .mt-spec-rij:hover { background: #ebe4d6; }
+}
+
+/* Bestek */
+.mt-bestek { display: grid; gap: 48px; }
+.mt-bestek-tekst { display: grid; gap: 20px; align-content: start; }
+.mt-feiten { border-top: 2px solid var(--inkt); margin-top: 8px; }
+.mt-feiten > div { display: grid; grid-template-columns: minmax(8em, 38%) minmax(0, 1fr); gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--lijn); }
+.mt-feiten dt { color: var(--zacht); padding-top: 0.15em; }
+.mt-feiten dd { font-weight: 500; overflow-wrap: anywhere; }
+.mt-feiten a { text-decoration: underline; text-underline-offset: 3px; }
+.mt-bestek-stalen { display: grid; grid-auto-flow: column; grid-auto-columns: 62%; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: calc(-1 * var(--g)); padding: 0 var(--g) 8px; }
+.mt-bestek-stalen li { scroll-snap-align: start; }
+.mt-bestek-stalen p { padding-top: 8px; }
+@media (min-width: 900px) {
+  .mt-bestek { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+  .mt-bestek-tekst { grid-column: 1 / span 5; position: sticky; top: 100px; align-self: start; }
+  .mt-bestek-stalen { grid-column: 7 / -1; grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; margin: 0; padding: 0; gap: 28px var(--g); }
+  .mt-bestek-stalen li:nth-child(even) { margin-top: 72px; margin-bottom: -72px; }
+}
+
+/* GR 002: een plaat beton */
+.mt-plaat { display: grid; gap: 0; margin: var(--sectie) var(--g) 0; background: var(--plaat); color: var(--papier); }
+.mt-plaat-tekst { display: grid; gap: 20px; padding: clamp(24px, 4vw, 64px); align-content: end; }
+.mt-feiten-licht { border-top-color: var(--papier); }
+.mt-feiten-licht > div { border-bottom-color: #3a3934; }
+.mt-feiten-licht dt { color: #aaa497; }
+.mt-plaat .mt-link:hover { color: var(--oranje); }
+@media (min-width: 900px) {
+  .mt-plaat { grid-template-columns: 5fr 7fr; }
+  .mt-plaat-foto { height: 100%; aspect-ratio: auto !important; min-height: 560px; }
+}
+
+/* Maker */
+.mt-maker { display: grid; gap: 32px; }
+.mt-maker-tekst { display: grid; gap: 20px; align-content: end; }
+@media (min-width: 900px) {
+  .mt-maker { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: end; }
+  .mt-maker-foto { grid-column: 2 / span 4; }
+  .mt-maker-tekst { grid-column: 7 / span 5; }
+}
+
+/* Start */
+.mt-start { padding-bottom: var(--sectie); }
+.mt-start-kop { font-size: clamp(2.6rem, 1rem + 6vw, 7.5rem); line-height: 0.9; letter-spacing: -0.045em; max-width: 12ch; margin-bottom: 32px; }
+.mt-wat { display: grid; gap: 28px; max-width: 960px; }
+.mt-wat-keuzes { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.mt-wat-keuzes legend { margin-bottom: 12px; padding: 0; }
+.mt-keuze { position: relative; }
+.mt-keuze input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.mt-keuze span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid var(--lijn); border-radius: 2px; font-weight: 500; transition: background-color 150ms, color 150ms, border-color 150ms; }
+.mt-keuze:hover span { border-color: var(--inkt); }
+.mt-keuze input:checked + span { background: var(--inkt); color: var(--papier); border-color: var(--inkt); }
+.mt-keuze input:focus-visible + span { outline: 2px solid var(--oranje); outline-offset: 2px; }
+.mt-wat-bericht { display: grid; gap: 6px; padding: 16px 0; border-top: 1px solid var(--inkt); border-bottom: 1px solid var(--lijn); font-size: 1.05rem; max-width: 60ch; }
+
+/* ── Voet ─────────────────────────────────────────────────────────────── */
+.mt-voet { background: var(--plaat); color: var(--papier); padding: 48px var(--g) 120px; }
+@media (min-width: 900px) { .mt-voet { padding-bottom: 48px; } .mt-voet .mt-feiten { columns: 2; column-gap: var(--g); } .mt-voet .mt-feiten > div { break-inside: avoid; } }
+
+/* ── Duimbalk en staalkaart ───────────────────────────────────────────── */
+.mt-duim {
+  position: fixed; z-index: 40; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom));
+  max-width: 420px; margin-inline: auto;
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 6px; padding: 6px;
+  border-radius: 999px; background: var(--inkt);
+}
+.mt-duim > * { width: 100%; }
+@media (min-width: 900px) { .mt-duim { display: none; } }
+.mt-blad { position: fixed; inset: 0; z-index: 60; overflow-y: auto; background: var(--papier); color: var(--inkt); padding: 0 var(--g) 40px; }
+.mt-blad[hidden] { display: none; }
+.mt-blad-kop { display: flex; justify-content: space-between; align-items: center; min-height: 72px; border-bottom: 2px solid var(--inkt); }
+.mt-blad-lijst li { border-bottom: 1px solid var(--lijn); }
+.mt-blad-lijst a { display: flex; align-items: center; gap: 16px; min-height: 64px; font-family: var(--letter-kop); font-size: clamp(1.6rem, 1rem + 3vw, 2.6rem); letter-spacing: -0.03em; }
+.mt-blad-staal { width: 40px; height: 40px; flex: none; }
+
+/* ── Beweging ─────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .mt-woord > span { animation: mt-op 900ms var(--ease) both; animation-delay: calc(80ms + var(--i) * 80ms); }
+  .mt-staal { animation: mt-staal 800ms var(--ease) both; }
+  .mt-staal:nth-child(2) { animation-delay: 120ms; }
+  .mt-staal:nth-child(3) { animation-delay: 200ms; }
+  .mt-staal:nth-child(4) { animation-delay: 280ms; }
+  .mt-staal:nth-child(5) { animation-delay: 360ms; }
+  .mt-staal:nth-child(6) { animation-delay: 440ms; }
+  .mt-blad-open li { animation: mt-staal 450ms var(--ease) both; }
+  @supports (animation-timeline: view()) {
+    .mt-zie { animation: mt-binnen linear both; animation-timeline: view(); animation-range: entry 0% entry 35%; }
+  }
+}
+@keyframes mt-op { from { transform: translateY(100%); } }
+@keyframes mt-staal { from { opacity: 0; transform: translateY(18px); } }
+@keyframes mt-binnen { from { opacity: 0; transform: translateY(28px); } }
+
+/* Op de smalste telefoons mag een lange knoptekst breken */
+@media (max-width: 379px) { .mt-knop { white-space: normal; text-align: center; max-width: 100%; line-height: 1.25; padding-block: 10px; } }
