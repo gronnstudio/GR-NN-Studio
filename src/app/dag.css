@@ -1,0 +1,181 @@
+/* Een tuin voor de hele dag. Licht en kleur lopen mee met de dag:
+   ochtend crème, middag papier, avond steen, nacht antraciet. Groen komt
+   alleen uit de foto's, oranje alleen uit het woordmerk (en de focusring). */
+
+.dag {
+  --papier: #f8f5ee;
+  --steen: #ddd5c7;
+  --inkt: var(--antraciet);
+  --zacht: rgb(26 26 24 / 0.6);
+  --lijn: rgb(26 26 24 / 0.2);
+  --g: clamp(16px, 3.2vw, 48px);
+  --sectie: clamp(72px, 10vw, 168px);
+  background: var(--creme);
+  color: var(--inkt);
+}
+.dag-mono { font: 500 0.6875rem/1.45 var(--letter-mono); letter-spacing: 0.08em; text-transform: uppercase; }
+.dag-zacht { color: var(--zacht); }
+.dag-h1, .dag-h2, .dag-poort-kop, .dag-uur-naam, .dag-tijd { font-family: var(--letter-kop); font-weight: 700; }
+.dag-h1 { font-size: clamp(2.9rem, 1rem + 6.4vw, 8rem); line-height: 0.92; letter-spacing: -0.04em; max-width: 12ch; }
+.dag-h2 { font-size: clamp(2.2rem, 1rem + 4vw, 5.25rem); line-height: 0.95; letter-spacing: -0.035em; max-width: 11ch; margin: 10px 0 20px; }
+
+/* Knoppen */
+.dag-knop {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: var(--raak); padding: 0 22px; border-radius: 999px;
+  background: var(--antraciet); color: var(--creme); border: 1px solid var(--antraciet);
+  font-weight: 600; font-size: 0.8125rem; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+  transition: background-color 200ms, color 200ms, transform 200ms var(--ease);
+}
+.dag-knop:hover { background: transparent; color: var(--antraciet); }
+.dag-knop:active { transform: scale(0.97); }
+.dag-knop-lijn { background: transparent; color: inherit; border-color: currentColor; }
+.dag-knop-lijn:hover { background: var(--antraciet); color: var(--creme); border-color: var(--antraciet); }
+
+/* Kop */
+.dag-kop {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 24px;
+  padding: 12px var(--g); background: var(--creme);
+  border-bottom: 1px solid transparent;
+}
+.dag-merk { display: flex; min-height: var(--raak); align-items: center; }
+.dag-merk img { width: 104px; height: auto; }
+.dag-klok, .dag-nav { display: none; }
+.dag-kop-knop { margin-left: auto; }
+
+/* Opening */
+.dag-opening { padding: clamp(20px, 3vw, 40px) var(--g) var(--g); }
+.dag-opening-onder { display: grid; gap: 16px; margin-top: 20px; }
+.dag-lead { max-width: 46ch; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); }
+
+/* De strook: vier dagdelen; het dagdeel van nu is het breedst */
+.dag-strook { display: grid; gap: 6px; margin-top: clamp(24px, 4vw, 48px); }
+.dag-uur a { position: relative; display: block; height: 72px; overflow: hidden; color: var(--creme); }
+.dag-uur-foto { position: absolute; inset: 0; aspect-ratio: auto !important; }
+.dag-uur a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgb(0 0 0 / 0.5)); }
+.dag-uur-tekst { position: absolute; left: 14px; right: 14px; bottom: 12px; z-index: 1; display: grid; gap: 4px; }
+.dag-uur-naam { font-size: clamp(1.1rem, 0.9rem + 0.9vw, 1.9rem); line-height: 1; letter-spacing: -0.02em; text-transform: uppercase; }
+.dag-naald { display: none; }
+:root[data-nu="ochtend"] .dag-uur-ochtend a, :root[data-nu="middag"] .dag-uur-middag a,
+:root[data-nu="avond"] .dag-uur-avond a, :root[data-nu="nacht"] .dag-uur-nacht a { height: 46svh; min-height: 280px; }
+:root:not([data-nu]) .dag-uur-ochtend a { height: 46svh; min-height: 280px; }
+:root[data-nu="ochtend"] .dag-uur-ochtend .dag-naald, :root[data-nu="middag"] .dag-uur-middag .dag-naald,
+:root[data-nu="avond"] .dag-uur-avond .dag-naald, :root[data-nu="nacht"] .dag-uur-nacht .dag-naald {
+  display: block; position: absolute; top: 12px; left: 14px; z-index: 1;
+  font: 500 0.6875rem/1 var(--letter-mono); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 8px; background: var(--creme); color: var(--antraciet);
+}
+
+/* Dagdelen */
+.dag-deel { display: grid; gap: 28px; padding: var(--sectie) var(--g); }
+.dag-middag { background: var(--papier); }
+.dag-avond { background: var(--steen); }
+.dag-nacht { background: var(--antraciet); color: var(--creme); --zacht: rgb(243 238 228 / 0.62); --lijn: rgb(243 238 228 / 0.24); }
+.dag-tijd { font-size: clamp(4.5rem, 2rem + 10vw, 13rem); line-height: 0.8; letter-spacing: -0.05em; opacity: 0.13; margin-bottom: -0.22em; }
+.dag-zin { max-width: 44ch; }
+.dag-vakken { margin-top: 28px; border-top: 1px solid currentColor; }
+.dag-vakken li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--lijn); font-weight: 600; }
+.dag-vakken li .dag-mono { opacity: 0.75; text-align: right; }
+figure figcaption { margin-top: 10px; }
+
+/* Vakken op een rij */
+.dag-rij { padding: var(--sectie) var(--g); border-top: 1px solid var(--inkt); }
+.dag-index { border-top: 1px solid var(--inkt); margin-top: 12px; }
+.dag-index a { display: grid; grid-template-columns: 2.5em minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--lijn); transition: padding 240ms var(--ease); }
+.dag-index-naam { font: 700 clamp(1.15rem, 0.9rem + 1.3vw, 2.4rem)/1.1 var(--letter-kop); letter-spacing: -0.02em; }
+.dag-index a:hover { padding-left: 10px; }
+
+/* Nick */
+.dag-nick { display: grid; gap: 28px; padding: var(--sectie) var(--g); background: var(--papier); }
+.dag-nick p + p { margin-top: 14px; }
+.dag-nick p { max-width: 50ch; }
+.dag-nick .dag-h2 { max-width: 14ch; hyphens: manual; }
+
+/* De poort */
+.dag-poort { padding: var(--sectie) var(--g); display: grid; gap: 24px; }
+.dag-poort-kop { font-size: clamp(2.6rem, 1rem + 7.5vw, 9.5rem); line-height: 0.92; letter-spacing: -0.045em; max-width: 12ch; }
+.dag-knoppen { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.dag-voet { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 24px var(--g) calc(96px + env(safe-area-inset-bottom)); border-top: 1px solid var(--lijn); }
+
+/* Duimbalk op de telefoon */
+.dag-duim {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--creme); border-top: 1px solid var(--lijn);
+}
+
+/* Heel smalle telefoons: knoppen mogen breken */
+@media (max-width: 379px) {
+  .dag-knop { white-space: normal; text-align: center; padding: 8px 14px; }
+  .dag-kop-knop { padding: 0 14px; }
+}
+
+@media (min-width: 900px) {
+  .dag-duim { display: none; }
+  .dag-voet { padding-bottom: 24px; }
+  .dag-kop { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .dag-klok { display: block; text-align: center; }
+  .dag-nav { display: block; justify-self: end; }
+  .dag-nav ul { display: flex; align-items: center; gap: 4px; }
+  .dag-nav a { display: inline-flex; align-items: center; min-height: var(--raak); padding: 0 12px; font: 500 0.75rem var(--letter-mono); letter-spacing: 0.08em; text-transform: uppercase; }
+  .dag-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .dag-kop { grid-template-columns: auto 1fr auto auto; }
+  .dag-kop-knop { margin-left: 8px; }
+
+  .dag-opening-onder { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
+  .dag-lead { grid-column: 1 / span 6; }
+  .dag-wie { grid-column: 9 / -1; text-align: right; }
+
+  .dag-strook { display: flex; height: max(320px, calc(100svh - 470px)); }
+  .dag-uur { flex: 1; min-width: 0; transition: flex-grow 700ms var(--ease); }
+  .dag-uur a, :root[data-nu] .dag-strook .dag-uur a, :root:not([data-nu]) .dag-uur-ochtend a { height: 100%; min-height: 0; }
+  :root[data-nu="ochtend"] .dag-uur-ochtend, :root[data-nu="middag"] .dag-uur-middag,
+  :root[data-nu="avond"] .dag-uur-avond, :root[data-nu="nacht"] .dag-uur-nacht, :root:not([data-nu]) .dag-uur-ochtend { flex-grow: 3.2; }
+  .dag-strook:hover .dag-uur { flex-grow: 1; }
+  .dag-strook .dag-uur:hover { flex-grow: 3.2; }
+
+  .dag-deel { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); row-gap: var(--g); align-items: start; }
+  .dag-ochtend .dag-tekst { grid-column: 1 / span 5; grid-row: 1 / span 2; }
+  .dag-ochtend .dag-f1 { grid-column: 7 / span 4; grid-row: 1; }
+  .dag-ochtend .dag-f2 { grid-column: 11 / -1; grid-row: 1; margin-top: 40%; }
+  .dag-ochtend .dag-f3 { grid-column: 9 / span 2; grid-row: 2; }
+
+  .dag-middag .dag-f1 { grid-column: 1 / span 4; }
+  .dag-middag .dag-tekst { grid-column: 6 / span 6; align-self: end; }
+  .dag-middag .dag-f2 { grid-column: 1 / span 7; }
+  .dag-middag .dag-f3 { grid-column: 9 / -1; margin-top: calc(var(--g) * 3); }
+
+  .dag-avond .dag-f1 { grid-column: 1 / -1; }
+  .dag-avond .dag-tekst { grid-column: 1 / span 6; }
+  .dag-avond .dag-f2 { grid-column: 8 / span 2; margin-top: calc(var(--g) * 2); }
+  .dag-avond .dag-f3 { grid-column: 10 / -1; }
+
+  .dag-nacht .dag-f1 { grid-column: 1 / span 5; grid-row: 1 / span 2; }
+  .dag-nacht .dag-tekst { grid-column: 7 / -1; }
+  .dag-nacht .dag-f2 { grid-column: 9 / span 3; }
+
+  .dag-rij { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+  .dag-rij > p, .dag-rij > h2 { grid-column: 1 / span 4; }
+  .dag-rij > h2 { grid-row: 2; }
+  .dag-index { grid-column: 6 / -1; grid-row: 1 / span 2; margin-top: 0; }
+
+  .dag-nick { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); align-items: end; }
+  .dag-nick > figure { grid-column: 2 / span 4; }
+  .dag-nick > div { grid-column: 7 / span 5; }
+}
+
+/* Beweging: alleen als het mag */
+@media (prefers-reduced-motion: no-preference) {
+  .dag-uur { animation: dag-op 900ms var(--ease) both; animation-delay: calc(120ms + var(--i) * 90ms); }
+  @supports (animation-timeline: view()) {
+    .dag-zie { animation: dag-binnen linear both; animation-timeline: view(); animation-range: entry 0% entry 30%; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dag-uur, .dag-knop, .dag-index a { transition: none; }
+}
+@keyframes dag-op { from { opacity: 0; transform: translateY(24px); } }
+@keyframes dag-binnen { from { opacity: 0; transform: translateY(24px); } }
