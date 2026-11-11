@@ -15,7 +15,6 @@ export type Dagdeel = {
   strook: string
   kop: string
   zin: string
-  vakken: { naam: string; prijs: string }[]
   strookFoto: Beeld
 }
 
@@ -26,11 +25,6 @@ export const DAGDELEN: Dagdeel[] = [
     strook: "Koffie in de zon",
     kop: "Koffie in de zon.",
     zin: "Een terras dat na een jaar nog strak ligt, begint onder de tegels. In Geulle legde ik 24 m² in twee dagen.",
-    vakken: [
-      { naam: "Tuinontwerp en indeling", prijs: "vanaf € 450" },
-      { naam: "Aanleg, terras en bestrating", prijs: "vaste prijs na offerte" },
-      { naam: "Materiaal en detaillering", prijs: "in elk ontwerp" },
-    ],
     strookFoto: FOTO.terrasTafel,
   },
   {
@@ -39,10 +33,6 @@ export const DAGDELEN: Dagdeel[] = [
     strook: "Spelen, plukken",
     kop: "Wat er groeit, past bij de grond.",
     zin: "Een complete border met plantlijst en plan, of een op maat. Voor zon of schaduw, voor vlinders of voor de keuken.",
-    vakken: [
-      { naam: "Beplantingsplan", prijs: "op maat" },
-      { naam: "Borderpakketten · 5, 10 of 15 m²", prijs: "€ 75 per m², aangeplant" },
-    ],
     strookFoto: FOTO.vlinder,
   },
   {
@@ -51,10 +41,6 @@ export const DAGDELEN: Dagdeel[] = [
     strook: "Tot rust komen",
     kop: "Water dat zijn weg vindt.",
     zin: "Twee vijvers, één samenhangend watersysteem. Doorlichting, renovatie, aanleg en de najaarsbeurt.",
-    vakken: [
-      { naam: "Water en vijvers", prijs: "vanaf € 175" },
-      { naam: "Renovatie", prijs: "offerte na kennismaking" },
-    ],
     strookFoto: FOTO.waterval,
   },
   {
@@ -63,7 +49,6 @@ export const DAGDELEN: Dagdeel[] = [
     strook: "Wat er leeft",
     kop: "Herfstblad is geen afval.",
     zin: "Het voedt je bodem en beschermt insecten en egels. Een gat in de schutting, een bladhoop en een veilige vijverrand helpen de egel de winter door.",
-    vakken: [],
     strookFoto: FOTO.egel,
   },
 ]

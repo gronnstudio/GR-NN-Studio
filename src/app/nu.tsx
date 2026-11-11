@@ -46,5 +46,5 @@ export function Naald() {
 /** Springt naar het dagdeel van nu; zonder tijd naar het begin van de dag. */
 export function NaarNu({ className, children }: { className?: string; children: React.ReactNode }) {
   const nu = useNu()
-  return <a href={`#${nu?.deel ?? "ochtend"}`} className={className}>{children}</a>
+  return <a href={`/#${nu?.deel ?? "ochtend"}`} className={className}>{children}</a>
 }

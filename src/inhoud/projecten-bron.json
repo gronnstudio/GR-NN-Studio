@@ -1,0 +1,537 @@
+{
+ "vijver": {
+  "slug": "vijverrenovatie",
+  "titel": "Twee vijvers. Eén samenhangend watersysteem.",
+  "soort": "Vijverrenovatie",
+  "plaats": "Limburg",
+  "dagdeel": "avond",
+  "cijfers": [
+   [
+    "Vijvers",
+    "2, verbonden binnen één watersysteem"
+   ],
+   [
+    "Open water",
+    "Circa 5.000 liter"
+   ],
+   [
+    "Waterlijn",
+    "Circa 12 meter"
+   ],
+   [
+    "Beekrand",
+    "Circa 6 meter"
+   ],
+   [
+    "Droge grind- en steenzone",
+    "Circa 3 m²"
+   ],
+   [
+    "Pvc-leidingwerk",
+    "50 mm druk-pvc; toegepaste buis gespecificeerd tot 7,5 bar"
+   ],
+   [
+    "Bochten",
+    "2 tot maximaal 4 bochten van 90°; overige bochten 45°"
+   ],
+   [
+    "Oppervlakteopvang",
+    "1 skimmer"
+   ],
+   [
+    "Onderhoudsaansluitingen",
+    "Losneembare koppelingen met schroefdraad"
+   ],
+   [
+    "Filter",
+    "3 kamers, met een bypass"
+   ],
+   [
+    "Regelbare waterverdeling",
+    "2 takken: naar vijver A en naar de waterval"
+   ],
+   [
+    "Bestede tijd",
+    "Circa 120 uur, inclusief voorbereiding en denkwerk"
+   ],
+   [
+    "Oorspronkelijk beplantingsplan",
+    "11 manden, 44 planten en 7 soorten"
+   ],
+   [
+    "Projectstatus",
+    "In afronding; verdere aanplant voorzien voor voorjaar 2027"
+   ]
+  ],
+  "cijfersNoot": "Afmetingen, waterinhoud en uren zijn benaderingen. De plantenaantallen beschrijven het oorspronkelijke plan.",
+  "uitgelicht": [
+   {
+    "waarde": "2",
+    "eenheid": "",
+    "label": "vijvers, één watersysteem"
+   },
+   {
+    "waarde": "5.000",
+    "eenheid": "l",
+    "label": "open water, circa"
+   },
+   {
+    "waarde": "120",
+    "eenheid": "uur",
+    "label": "werk, circa, incl. denkwerk"
+   },
+   {
+    "waarde": "50",
+    "eenheid": "mm",
+    "label": "druk-pvc leidingwerk"
+   }
+  ],
+  "hoofdstukken": [
+   {
+    "kop": "De opgave: ieder onderdeel op elkaar afstemmen",
+    "kort": "De opgave",
+    "alineas": [
+     "Een vijverrenovatie bestaat uit veel samenhangende keuzes. Waar stroomt het water heen? Hoe komt het terug? Hoe wordt het verdeeld tussen de waterval en de andere vijver? En hoe blijven het filter en de aansluitingen bereikbaar wanneer de randen eenmaal zijn afgewerkt?",
+     "Bij dit project vraagt vooral de combinatie van twee vijvers, een waterval en een beekloop om een doordachte inrichting. Ze moeten technisch op elkaar aansluiten en in de tuin als één geheel aanvoelen. Dat betekent voortdurend schakelen tussen leidingen, waterverdeling, beplanting en de zichtbare afwerking.",
+     "De bestaande situatie vormt daarbij het vertrekpunt. De reconstructie richt zich op het verbinden en afstemmen van de onderdelen, met aandacht voor de plekken waar techniek overgaat in water, steen en groen."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F02-1.jpg",
+     "breed": 1000,
+     "hoog": 1778,
+     "alt": "De bestaande vijver vóór de renovatie, afgedekt met een net, met een rand van natuursteen langs het klinkerpad."
+    }
+   },
+   {
+    "kop": "Het onzichtbare werk: meten, tekenen en blijven puzzelen",
+    "kort": "Het denkwerk",
+    "alineas": [
+     "Een belangrijk deel van het werk gebeurt voordat een leiding wordt aangesloten. Het begint met kijken, meten en de route van het water stap voor stap doordenken.",
+     "Waar kan een leiding lopen? Welke bochten en koppelingen zijn nodig? Op welke plek is een afsluiter nog bereikbaar? Hoe passen de aansluitingen op de pomp en het filter? En wat betekent een wijziging op één plek voor de rest van het systeem?",
+     "Achter de schermen zijn de opstelling en aansluitingen steeds verder uitgewerkt. Daarbij zijn schema’s, materiaalkeuzes en de praktische mogelijkheden in de tuin naast elkaar gelegd. Tijdens de uitvoering vraagt de bestaande situatie soms opnieuw om afwegingen: een aansluiting komt anders uit, er is een extra bocht nodig of een kraan moet op een beter bereikbare plek worden gezet.",
+     "Dat is het puzzelwerk dat straks grotendeels uit beeld verdwijnt. Het bepaalt wel hoe het systeem functioneert en hoe prettig eraan gewerkt kan worden wanneer onderhoud nodig is.",
+     "De circa 120 bestede uren omvatten daarom zowel het zichtbare werk in de tuin als de voorbereiding, het uitzoeken en het uitdenken van het geheel. Omgerekend is dat ongeveer vijftien werkdagen van acht uur, verspreid over het traject."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F03-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een lange baan vijverfolie uitgerold over het gazon om hem op maat te meten."
+    }
+   },
+   {
+    "kop": "Hoe de twee vijvers samenwerken",
+    "kort": "De waterroute",
+    "alineas": [
+     "Voor de technische uitwerking zijn de vijvers aangeduid als vijver A en vijver B. Vijver B is het vertrekpunt van het opgepompte water.",
+     "Vanuit vijver B gaat het water via de pomp naar het driekamerfilter. Na de filtratie wordt het verdeeld over twee takken: één richting vijver A en één richting de waterval. Het water van de waterval loopt via de beekloop terug naar vijver B. Vijver A voert via de afvoer- en overloopverbinding terug naar vijver B.",
+     "Zo ontstaan twee routes binnen hetzelfde watersysteem. De verdeling is regelbaar, zodat de toevoer naar vijver A en naar de waterval op elkaar kan worden afgestemd.",
+     "Het systeem is daarmee als geheel uitgedacht. De waterval, beekloop, vijvers en filteropstelling hebben ieder een eigen plek in de route van het water."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F11.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Nick zit op de keien bij de beekloop in aanbouw, met vijverfolie, grind en een zwarte slang om hem heen.",
+     "bijschrift": "De beekloop in aanbouw, juli."
+    }
+   },
+   {
+    "kop": "Drukvast pvc en een zorgvuldig gekozen leidingroute",
+    "kort": "Het leidingwerk",
+    "alineas": [
+     "Voor het vaste leidingwerk is gekozen voor druk-pvc met een diameter van 50 millimeter. De toegepaste buis is gespecificeerd tot een druk van 7,5 bar. Dat getal beschrijft de drukvastheid van de buis; de werkdruk van de vijverinstallatie is hier niet mee vastgesteld.",
+     "Bij de leidingroute is bewust aandacht besteed aan de bochten. Het aantal bochten van 90 graden is beperkt gehouden tot twee à maximaal vier. De overige richtingsveranderingen worden met bochten van 45 graden gemaakt. Het doel is om het water zo geleidelijk mogelijk door de leidingen te laten stromen en onnodige weerstand te beperken.",
+     "Daar gaat veel ruimtelijk puzzelwerk aan vooraf. Een leiding moet passen binnen de bestaande tuin, aansluiten op de apparatuur en voldoende ruimte laten om kranen en koppelingen te bedienen. Iedere bocht heeft daardoor een plaats in het ontwerp.",
+     "Naast de buizen en bochten zijn T-stukken, verloopstukken, koppelingen en afsluiters verwerkt. Een T-stuk maakt een vertakking mogelijk; een verloopstuk verbindt onderdelen met verschillende aansluitmaten. Samen vormen die kleine onderdelen het complete leidingstelsel.",
+     "Bij deze renovatie bleken meer van die onderdelen nodig dan vooraf was voorzien. Het is een van de lessen uit het project: een globale route op papier moet op locatie worden vertaald naar alle afzonderlijke aansluitingen."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F04-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een gegraven sleuf langs de haag met twee grijze pvc-leidingen, op weg naar het filter naast de vijver."
+    }
+   },
+   {
+    "kop": "Losneembare aansluitingen voor onderhoud",
+    "kort": "Onderhoud",
+    "alineas": [
+     "Bij de technische opstelling zijn koppelingen met schroefdraad gebruikt om onderdelen te kunnen afkoppelen. Zo kan onder meer het filter worden losgenomen voor onderhoud of werkzaamheden aan de opstelling.",
+     "Die keuze vraagt al tijdens de aanleg om vooruitdenken. Er moet ruimte zijn om een koppeling los te draaien, een kraan te bedienen en een onderdeel daadwerkelijk uit de opstelling te halen.",
+     "De bereikbaarheid is daarom meegenomen in het leidingontwerp en de afwerking. Ook wanneer het project klaar is, moet er aan de installatie gewerkt kunnen worden."
+    ]
+   },
+   {
+    "kop": "Drie filterkamers, twee regelbare takken en een bypass",
+    "kort": "Het filter",
+    "alineas": [
+     "De technische opstelling combineert een AquaForte DM-10000 Vario S-pomp met een driekamerfilter. Rond het filter is een bypass opgenomen: een alternatieve route waarmee het water langs het filter kan worden geleid.",
+     "Dat geeft mogelijkheden om de waterroute aan te passen wanneer aan het filter wordt gewerkt. Welke kranen daarbij open of dicht moeten staan, maakt deel uit van het gebruik van de installatie.",
+     "De afsluiters en regelkranen hebben verschillende taken. Schuifafsluiters bij de onderste filterafvoeren dienen voor het openen en sluiten van die afvoeren. Kogelkranen in de leidingen maken het mogelijk om de waterverdeling over de twee uitgaande takken bij te stellen.",
+     "Die functies zijn meegenomen in de inrichting. Zo krijgt onderhoud al tijdens de aanleg een plek en kan de waterverdeling na het aansluiten worden afgestemd."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F05.jpg",
+     "breed": 1200,
+     "hoog": 1600,
+     "alt": "Een zwarte filterbak met drie kamers, rechtop gezet naast de haag tijdens de werkzaamheden."
+    }
+   },
+   {
+    "kop": "Een skimmer voor het wateroppervlak",
+    "kort": "De skimmer",
+    "alineas": [
+     "Naast de filteropstelling is een skimmer opgenomen voor het opvangen van drijvend vuil, zoals bladeren en ander materiaal aan het wateroppervlak.",
+     "Daarmee krijgt ook het oppervlak van de vijver een plek in het technische plan. De skimmer vormt een extra onderdeel om bij het gebruik en onderhoud van het geheel rekening mee te houden."
+    ],
+    "beeld": null
+   },
+   {
+    "kop": "Een beschadigd filter herstellen: een project binnen het project",
+    "kort": "Filterherstel",
+    "alineas": [
+     "Een van de lastigere onderdelen was het herstellen van het beschadigde filter van polypropyleen, ook wel PP genoemd. Dat bleek in de praktijk geen eenvoudige reparatie.",
+     "Voor het herstel is tweecomponentenlijm gebruikt. Daarmee was het werk nog niet afgerond: naderhand bleek aanvullende afdichting met RubberSeal nodig. De reparatie vroeg daardoor meer aandacht en uitzoekwerk dan vooraf voorzien.",
+     "Dit onderdeel laat goed zien wat renovatiewerk inhoudt. Bestaande materialen en beschadigingen brengen vragen met zich mee die pas tijdens de uitvoering volledig duidelijk worden. Hier moest de aanpak worden bijgesteld om het herstel verder uit te werken.",
+     "Het repareren van het filter is daarmee ook onderdeel van de ervaring die in dit project is opgedaan: zorgvuldig kijken naar het materiaal, beoordelen wat een ingreep oplevert en verder zoeken wanneer de eerste aanpak nog niet voldoende is."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F07-1.jpg",
+     "breed": 1400,
+     "hoog": 1050,
+     "alt": "De beschadigde filterbak van dichtbij, met een lijmpistool voor de reparatie en losse pvc-buizen eromheen."
+    }
+   },
+   {
+    "kop": "De overgang van water naar tuin",
+    "kort": "Water naar tuin",
+    "alineas": [
+     "Naast het technische werk krijgt de natuurlijke afwerking veel aandacht. Rond circa twaalf meter waterlijn en zes meter beekrand ontmoeten water, steen en planten elkaar.",
+     "Daar bepaalt de afwerking hoe de vijvers in de tuin liggen. De randen moeten aansluiten op de waterval en beekloop, terwijl er ruimte blijft voor beplanting. De droge grind- en steenzone van ongeveer drie vierkante meter maakt eveneens deel uit van die overgang.",
+     "Het aanvullen met teelaarde hoort bij de laatste werkzaamheden rondom het project. Daarna kan de verdere aanplant de aansluiting op de tuin versterken. Het beeld zal dus ook na de technische afronding nog veranderen: planten moeten zich ontwikkelen en hun plek tussen het water en de stenen gaan innemen."
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F08-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Keien en natuursteen op de vijverfolie aan de rand bij het terras, waar het water overgaat in de tuin."
+    }
+   },
+   {
+    "kop": "Elf plantmanden en zeven soorten in het oorspronkelijke plan",
+    "kort": "Beplanting",
+    "alineas": [
+     "Voor de waterlijn en beekrand is een beplantingsplan opgesteld met in totaal elf manden, elk met vier planten. Dat komt neer op 44 planten, verdeeld over zeven soorten.",
+     "De verdeling in het oorspronkelijke plan is:"
+    ],
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F09-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een hand zet een jong vijverplantje in een plantmand met grind, met het plantlabel ernaast."
+    }
+   },
+   {
+    "kop": "De afronding: opruimen, aanvullen en verder laten groeien",
+    "kort": "De afronding",
+    "alineas": [
+     "Het project bevindt zich in de laatste fase. Het resterende hout en puin moeten worden afgevoerd en de omliggende delen worden aangevuld met teelaarde. De beschadigde vijverplanten kunnen worden vervangen; de aanvullende aanplant volgt naar verwachting in het voorjaar.",
+     "Bij de afronding hoort ook aandacht voor het gebruik: de bediening van de kranen, de waterverdeling en de bereikbaarheid van de technische onderdelen. Een zorgvuldig aangelegd systeem moet voor de eigenaar ook begrijpelijk zijn.",
+     "Het resultaat tot nu toe is een gereconstrueerde samenhang tussen twee vijvers, een waterval, een beekloop en de technische opstelling. De komende aanplant zal die basis verder verbinden met de tuin."
+    ]
+   },
+   {
+    "kop": "Een eerste project dat de basis legt voor GRØNN Studio",
+    "kort": "Een eerste project",
+    "alineas": [
+     "Deze vijverrenovatie heeft een bijzondere plek binnen GRØNN Studio. Het is een eerste project waarin ontwerp, techniek, uitvoering en beplanting op deze schaal samenkomen.",
+     "Het traject heeft veel geleerd over voorbereiding, materiaalgebruik, het herstellen van bestaande onderdelen en de tijd die nodig is om een bestaande situatie zorgvuldig aan te passen. Vooral het vertalen van een plan naar alle afzonderlijke aansluitingen en werkstappen heeft waardevolle ervaring opgeleverd."
+    ]
+   }
+  ],
+  "citaat": {
+   "tekst": "Ik heb ontzettend genoten van dit eerste project. Van het uitdenken van de waterstromen tot het moment waarop de onderdelen samenkomen. Het vertrouwen om dit te mogen maken was een belangrijke stap in het opbouwen van GRØNN Studio.",
+   "bron": "Nick Peters, GRØNN Studio"
+  },
+  "klant": {
+   "tekst": "Nick verbond onze bestaande vijvers tot één natuurlijk geheel. Helder in zijn offerte, secuur in het werk, en hij komt zijn afspraken na. Onze tuin is er echt op vooruitgegaan.",
+   "bron": "Veronique, opdrachtgever · Google-review"
+  },
+  "slot": {
+   "kop": "Een vijver die weer past bij de tuin",
+   "alineas": [
+    "Heb je een bestaande vijver die aan renovatie toe is, of wil je onderzoeken hoe een waterval, beekloop en beplanting beter op elkaar kunnen aansluiten?",
+    "GRØNN Studio bekijkt de bestaande situatie en denkt mee over de techniek, inrichting en uitvoering. Zo begint ieder project met een duidelijk beeld van wat er nodig is om water en tuin samen te laten werken."
+   ],
+   "beeld": {
+    "src": "/foto/vijverrenovatie-F10.jpg",
+    "breed": 2000,
+    "hoog": 1500,
+    "alt": "De waterval stroomt over natuursteen de vijver in, met een rood bloeiende canna ervoor en de leidingen met een kogelkraan erachter."
+   }
+  },
+  "reeks": [
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F02-1.jpg",
+     "breed": 1000,
+     "hoog": 1778,
+     "alt": "De bestaande vijver vóór de renovatie, afgedekt met een net, met een rand van natuursteen langs het klinkerpad."
+    },
+    "fase": "Bestaande situatie",
+    "zin": "De oude vijver, nog onder een net."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F02-2.jpg",
+     "breed": 1000,
+     "hoog": 1778,
+     "alt": "De oude situatie: een vijver tegen een gemetselde muur onder een boom, met keien en beplanting langs het klinkerpad."
+    },
+    "fase": "Bestaande situatie",
+    "zin": "Tegen de muur, onder de boom."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F03-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een lange baan vijverfolie uitgerold over het gazon om hem op maat te meten."
+    },
+    "fase": "Proces",
+    "zin": "Folie uitrollen en op maat meten."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F04-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een gegraven sleuf langs de haag met twee grijze pvc-leidingen, op weg naar het filter naast de vijver."
+    },
+    "fase": "Uitvoering",
+    "zin": "Een sleuf langs de haag voor de leidingen."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F05.jpg",
+     "breed": 1200,
+     "hoog": 1600,
+     "alt": "Een zwarte filterbak met drie kamers, rechtop gezet naast de haag tijdens de werkzaamheden."
+    },
+    "fase": "Uitvoering",
+    "zin": "De filterbak met drie kamers."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F07-2.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een hand vol slib uit de filterbak, boven het troebele water in de kamer."
+    },
+    "fase": "Proces",
+    "zin": "Slib uit het oude filter."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F08-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Keien en natuursteen op de vijverfolie aan de rand bij het terras, waar het water overgaat in de tuin."
+    },
+    "fase": "Uitvoering",
+    "zin": "Keien op de folie, waar water tuin wordt."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F11.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Nick zit op de keien bij de beekloop in aanbouw, met vijverfolie, grind en een zwarte slang om hem heen.",
+     "bijschrift": "De beekloop in aanbouw, juli."
+    },
+    "fase": "Uitvoering",
+    "zin": "De beekloop in aanbouw, juli."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F09-1.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Een hand zet een jong vijverplantje in een plantmand met grind, met het plantlabel ernaast."
+    },
+    "fase": "Uitvoering",
+    "zin": "Jonge vijverplanten in een mand met grind."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F08-2.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Nick gehurkt tussen de keien aan de vijverrand, lachend, met een zwart onderdeel in de hand en een geopende doos naast zich.",
+     "bijschrift": "Nick aan het werk, september."
+    },
+    "fase": "Uitvoering",
+    "zin": "Nick aan het werk, september."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F09-2.jpg",
+     "breed": 1000,
+     "hoog": 1333,
+     "alt": "Nick Peters lachend tussen de oeverplanten, aan het werk in de vijver.",
+     "bijschrift": "Nick aan het werk."
+    },
+    "fase": "Uitvoering",
+    "zin": "Tussen de oeverplanten."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F10.jpg",
+     "breed": 2000,
+     "hoog": 1500,
+     "alt": "De waterval stroomt over natuursteen de vijver in, met een rood bloeiende canna ervoor en de leidingen met een kogelkraan erachter."
+    },
+    "fase": "Afronding",
+    "zin": "De waterval stroomt over natuursteen."
+   },
+   {
+    "beeld": {
+     "src": "/foto/vijverrenovatie-F01.jpg",
+     "breed": 2000,
+     "hoog": 1500,
+     "alt": "Overzicht van de tuin tijdens de afronding: een klinkerpad, een treurwilg, ronde stapstenen in de vijver en borders met keien en jonge beplanting."
+    },
+    "fase": "Afronding",
+    "zin": "Twee vijvers, één watersysteem."
+   }
+  ],
+  "videos": [
+   {
+    "src": "/video/v01.mp4",
+    "poster": "/video/v01.jpg",
+    "breed": 720,
+    "hoog": 1280,
+    "beschrijving": "Een telefoonstatiefje op een bemoste kei in de tuin in aanbouw, met zand en leidingen op de achtergrond.",
+    "bijschrift": "Het werk vastleggen onderweg, met een Ulanzi-statiefje op een kei."
+   },
+   {
+    "src": "/video/v02.mp4",
+    "poster": "/video/v02.jpg",
+    "breed": 720,
+    "hoog": 1280,
+    "beschrijving": "Nick ligt op zijn buik aan de waterkant en zet oeverplanten tussen de stenen, onder een treurwilg.",
+    "bijschrift": "Oeverplanten zetten aan de waterkant."
+   }
+  ]
+ },
+ "terras": {
+  "slug": "terras-geulle",
+  "titel": "Een terras van 24 m², gelegd in twee dagen.",
+  "soort": "Terrasaanleg",
+  "plaats": "Geulle, Limburg",
+  "wanneer": "Augustus 2026",
+  "status": "Afgerond",
+  "dagdeel": "ochtend",
+  "ondertitel": "Van ruwe ondergrond naar een strak terras, met het water de goede kant op.",
+  "intro": [
+   "De vraag kwam op een kinderfeestje. Iemand vroeg naar mijn werk en vertelde over een terras dat er maar niet kwam: stratenmakers waren te duur, of pas de volgende zomer beschikbaar. De materialen lagen er al. Wat ontbrak, was iemand die het deed.",
+   "Het werden 24 m² betontegels van 60 × 60 × 4 cm. Geen tegels erin en klaar: de voorbereiding bepaalt uiteindelijk het resultaat. Het leggen zelf kostte ongeveer 8 uur; met het grondwerk erbij waren het twee dagen."
+  ],
+  "cijfers": [
+   [
+    "Oppervlak",
+    "24 m²"
+   ],
+   [
+    "Tegels",
+    "Betontegels 60 × 60 × 4 cm"
+   ],
+   [
+    "Tijd",
+    "Circa 8 uur leggen; twee dagen in totaal"
+   ],
+   [
+    "Materialen",
+    "Aangeleverd door de klant"
+   ],
+   [
+    "Afschot",
+    "Richting het gras"
+   ],
+   [
+    "Plaats",
+    "Geulle, Limburg"
+   ]
+  ],
+  "uitgelicht": [
+   {
+    "waarde": "24",
+    "eenheid": "m²",
+    "label": "betontegels"
+   },
+   {
+    "waarde": "60",
+    "eenheid": "cm",
+    "label": "tegels van 60 × 60 × 4"
+   },
+   {
+    "waarde": "8",
+    "eenheid": "uur",
+    "label": "leggen, circa"
+   },
+   {
+    "waarde": "2",
+    "eenheid": "",
+    "label": "dagen, alles samen"
+   }
+  ],
+  "stappen": [
+   "Ondergrond ontgraven en voorbereiden",
+   "Ondergrond ophogen en verdichten",
+   "Zandbed aanbrengen en afrijen",
+   "Banden stellen en uitlijnen",
+   "Zandbed aantrillen en opnieuw controleren",
+   "24 m² betontegels leggen",
+   "Alles zorgvuldig op afschot richting het gras",
+   "Afwerken en het geheel controleren"
+  ],
+  "citaat": {
+   "tekst": "Een goed terras ziet er niet alleen waterpas uit. Het weet ook waar het water heen moet.",
+   "bron": "Nick Peters, GRØNN Studio"
+  },
+  "slot": {
+   "kop": "De basis bepaalt het resultaat",
+   "alineas": [
+    "Een terras of pad dat al te lang op een vakman wacht? Vertel wat er ligt en wat je wilt; dan kijk ik of en wanneer het past."
+   ]
+  },
+  "hoofdbeeld": {
+   "src": "/foto/terras-geulle-T01.jpg",
+   "breed": 1000,
+   "hoog": 1333,
+   "alt": "Het nieuwe terras van lichte betontegels onder de overkapping, met de opsluitband langs de rand van het zandbed."
+  },
+  "reeks": [
+   {
+    "src": "/foto/terras-geulle-T02.jpg",
+    "breed": 1000,
+    "hoog": 1333,
+    "alt": "Het smalle pad van betontegels langs de gevel en de schutting, strak uitgelijnd tot achter in de tuin."
+   },
+   {
+    "src": "/foto/terras-geulle-T04.jpg",
+    "breed": 1000,
+    "hoog": 1333,
+    "alt": "Het tegelpad vanaf de andere kant, doorlopend tot aan de achterdeur onder de overkapping."
+   }
+  ],
+  "slotbeeld": {
+   "src": "/foto/terras-geulle-T03.jpg",
+   "breed": 1000,
+   "hoog": 1333,
+   "alt": "Nick staat op het nieuwe tegelpad, handen in de zij, met een schop en een waterpas bij de hand.",
+   "bijschrift": "Klaar, na twee dagen."
+  }
+ }
+}

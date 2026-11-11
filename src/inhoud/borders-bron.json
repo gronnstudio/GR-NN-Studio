@@ -1,0 +1,419 @@
+{
+ "borders": [
+  {
+   "slug": "vlinderborder",
+   "naam": "Vlinderborder",
+   "kenmerken": [
+    "Volle zon",
+    "Normale tot droge grond",
+    "Bloei juni–oktober"
+   ],
+   "zin": "Zonnehoed, salie en siergras in de stijl van een prairie. Vol leven voor bijen en vlinders, en in de winter blijven de zaaddozen staan.",
+   "planten": [
+    "Zonnehoed",
+    "Salie",
+    "IJzerhard",
+    "Siergras",
+    "Kattenkruid",
+    "Ooievaarsbek"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-vlinderborder.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Een bloeiende border met roze zonnehoed, duizendknoop en kleine witte asters."
+   }
+  },
+  {
+   "slug": "schaduwborder",
+   "naam": "Schaduwborder",
+   "kenmerken": [
+    "Halfschaduw tot schaduw",
+    "Vochthoudende grond",
+    "Jaarrond groen"
+   ],
+   "zin": "Varens, hosta en herfstanemoon voor de plek onder een boom of langs de noordgevel. Rustig groen dat licht brengt waar weinig zon komt.",
+   "planten": [
+    "Mannetjesvaren",
+    "Hosta",
+    "Herfstanemoon",
+    "Bosgras",
+    "Ooievaarsbek",
+    "Krentenboom"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-schaduwborder.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Groot bont blad en varens in de schaduw langs een rand."
+   }
+  },
+  {
+   "slug": "vijverrand",
+   "naam": "Vijverrand",
+   "kenmerken": [
+    "Zon tot halfschaduw",
+    "Natte grond en ondiep water",
+    "Bij elke vijver"
+   ],
+   "zin": "De oever van droge rand tot ondiep water. Gele lis, kattenstaart en zegge maken de overgang zacht en geven kikkers en libellen een plek.",
+   "planten": [
+    "Gele lis",
+    "Kattenstaart",
+    "Gele zegge",
+    "Moerasvergeet-mij-niet",
+    "Ooievaarsbek"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-vijverrand.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Een pol oeverplant in ondiep water, tussen kleine waterplanten."
+   }
+  },
+  {
+   "slug": "droge-border",
+   "naam": "Droge border",
+   "kenmerken": [
+    "Volle zon",
+    "Droge grond of grind",
+    "Weinig water nodig"
+   ],
+   "zin": "Lavendel, kruisdistel en vedergras tussen grind en keien. Gemaakt voor hete zomers en voor wie niet elke avond wil sproeien.",
+   "planten": [
+    "Lavendel",
+    "Kruisdistel",
+    "Vedergras",
+    "Hemelsleutel",
+    "Tijm"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-droge-border.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Lavendel, zonnehoed en kruiden tussen grind en stenen in de zon."
+   }
+  },
+  {
+   "slug": "inheemse",
+   "naam": "Inheemse border",
+   "kenmerken": [
+    "Volle zon",
+    "Schrale tot normale grond",
+    "Bloei mei–september"
+   ],
+   "zin": "Margriet, knoopkruid en beemdkroon: wilde planten die hier van nature horen. Insecten kennen ze al, en ze vragen bijna geen zorg.",
+   "planten": [
+    "Margriet",
+    "Knoopkruid",
+    "Beemdkroon",
+    "Wilde marjolein",
+    "Muskuskaasjeskruid",
+    "Ruwe smele"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-inheemse.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Een wilde bloemenweide met blauwe korenbloemen."
+   }
+  },
+  {
+   "slug": "plukborder",
+   "naam": "Plukborder",
+   "kenmerken": [
+    "Volle zon",
+    "Normale grond",
+    "Bloei juni–oktober"
+   ],
+   "zin": "Rudbeckia, vlambloem en kandelaarsbloem in rijen die je kunt plukken. Een bos bloemen uit eigen tuin, de hele zomer lang.",
+   "planten": [
+    "Kandelaarsbloem",
+    "Vlambloem",
+    "Rudbeckia",
+    "Duizendblad",
+    "Margriet",
+    "Vrouwenmantel"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-plukborder.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Een border met gele rudbeckia en paarse bloemen langs een wit hek."
+   }
+  },
+  {
+   "slug": "witte-border",
+   "naam": "Witte border",
+   "kenmerken": [
+    "Halfschaduw",
+    "Vochthoudende grond",
+    "Licht in de avond"
+   ],
+   "zin": "Hortensia ‘Annabelle’, herfstanemoon en wit vingerhoedskruid tussen fris groen. Overdag rustig, en ’s avonds licht het op.",
+   "planten": [
+    "Herfstanemoon",
+    "Vingerhoedskruid",
+    "Zeeuws knoopje",
+    "Ooievaarsbek",
+    "Japans berggras",
+    "Hortensia ‘Annabelle’"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-witte-border.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Een groene border met witte bloeiaren."
+   }
+  },
+  {
+   "slug": "eetbare-border",
+   "naam": "Eetbare border",
+   "kenmerken": [
+    "Volle zon",
+    "Normale grond",
+    "Oogst juni–september"
+   ],
+   "zin": "Rode bes, rabarber en keukenkruiden in een border die er ook mooi uitziet. Plukken voor de keuken, vlak bij de deur.",
+   "planten": [
+    "Echte salie",
+    "Wilde marjolein",
+    "Bieslook",
+    "Bosaardbei",
+    "Rode bes",
+    "Rabarber"
+   ],
+   "beeld": {
+    "src": "/foto/borderpakketten-eetbare-border.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Verse keukenkruiden zoals rozemarijn en peterselie op een houten plank."
+   }
+  }
+ ],
+ "bodem": [
+  {
+   "naam": "Compost + dennenschors",
+   "zin": "Een laag compost met daarover dennenschors. Licht van kleur en zacht, een natuurlijke afdeklaag die na een paar jaar in de bodem opgaat.",
+   "beeld": {
+    "src": "/foto/borderpakketten-compost-dennenschors.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Lichte dennenschors, close-up"
+   }
+  },
+  {
+   "naam": "Compost + Franse schors",
+   "zin": "Een laag compost met daarover Franse schors. Grover en roodbruin, blijft langer liggen en ziet er strak uit.",
+   "beeld": {
+    "src": "/foto/borderpakketten-compost-franse-schors.jpg",
+    "breed": 1600,
+    "hoog": 1200,
+    "alt": "Grove roodbruine Franse schors, close-up"
+   }
+  }
+ ],
+ "maten": [
+  5,
+  10,
+  15
+ ],
+ "prijs": {
+  "aangeplant": 75,
+  "opgestuurd": 30
+ },
+ "materialen": [
+  {
+   "id": "klinkers",
+   "kop": "Klinkers",
+   "beeld": {
+    "src": "/foto/materialen-klinkers.jpg",
+    "breed": 1600,
+    "hoog": 900,
+    "alt": "Rode gebakken klinkers in visgraatverband."
+   },
+   "materialen": [
+    {
+     "naam": "Gebakken klinkers",
+     "zin": "Gebakken klei in warme kleuren, die met de jaren mooier wordt. In waalformaat of dikformaat."
+    },
+    {
+     "naam": "Getrommelde klinkers",
+     "zin": "Afgeronde randen en een geleefde look, alsof ze er altijd al lagen."
+    },
+    {
+     "naam": "Kasseien en kinderkoppen",
+     "zin": "Bolle, oude straatstenen voor een landelijk pad of een erf."
+    },
+    {
+     "naam": "Natuurstenen klinkers",
+     "zin": "Graniet, basalt of porfier: elke steen anders, gaat een leven lang mee."
+    },
+    {
+     "naam": "Betonklinkers",
+     "zin": "Sterk en voordelig, in veel kleuren en formaten."
+    },
+    {
+     "naam": "Kleurechte betonklinkers",
+     "zin": "De kleur zit door de hele steen en verbleekt niet in de zon."
+    }
+   ]
+  },
+  {
+   "id": "tegels",
+   "kop": "Terrastegels",
+   "beeld": {
+    "src": "/foto/materialen-tegels.jpg",
+    "breed": 1600,
+    "hoog": 900,
+    "alt": "Een terras van terracotta tegels met bloeiende planten en een tafeltje."
+   },
+   "materialen": [
+    {
+     "naam": "Keramische tegels, 2 cm",
+     "zin": "Vlekken en mos krijgen geen grip. In beton-, natuursteen- of houtlook; ook op tegeldragers."
+    },
+    {
+     "naam": "Keramische tegels, 3 cm",
+     "zin": "Dikker en sterker, dus minder kans op breuk. Ook voor de oprit."
+    },
+    {
+     "naam": "Beton met keramiek",
+     "zin": "Een keramische toplaag op beton: zo makkelijk te leggen als een gewone tegel."
+    },
+    {
+     "naam": "Betontegels",
+     "zin": "Voordelig, in veel formaten, vaak met een laag tegen vlekken."
+    },
+    {
+     "naam": "Kleurechte betontegels",
+     "zin": "Kleur door en door, met een strakke of juist ruwe bovenkant."
+    },
+    {
+     "naam": "Natuursteen tegels",
+     "zin": "Echte steen, zoals hardsteen of leisteen. Geen tegel is hetzelfde."
+    },
+    {
+     "naam": "Flagstones",
+     "zin": "Onregelmatige platen natuursteen, los in gras of grind gelegd voor een natuurlijk pad of terras."
+    },
+    {
+     "naam": "Oud-Hollandse tegels",
+     "zin": "Grijze tegels met een gebruikte look, passend bij een oud huis."
+    },
+    {
+     "naam": "Tegels voor de oprit",
+     "zin": "Extra dik, zodat ze een auto dragen zonder te breken."
+    }
+   ]
+  },
+  {
+   "id": "water",
+   "kop": "Regenwater en grind",
+   "beeld": {
+    "src": "/foto/materialen-water.jpg",
+    "breed": 1600,
+    "hoog": 900,
+    "alt": "Grijs split van dichtbij."
+   },
+   "materialen": [
+    {
+     "naam": "Waterdoorlatende bestrating",
+     "zin": "Stenen waar regen doorheen zakt, de grond in in plaats van het riool."
+    },
+    {
+     "naam": "Grind en split",
+     "zin": "Voor paden en plekken waar water moet wegzakken, in veel kleuren."
+    },
+    {
+     "naam": "Grindplaten",
+     "zin": "Houden grind op zijn plek, zodat je er ook met een kruiwagen of fiets over kunt."
+    },
+    {
+     "naam": "Keien en zwerfstenen",
+     "zin": "Voor een vijverrand, een droge beek of als rustplek voor insecten."
+    },
+    {
+     "naam": "Lijngoten",
+     "zin": "Een smalle goot die regenwater van het terras afvoert."
+    }
+   ]
+  },
+  {
+   "id": "muren",
+   "kop": "Muren, trappen en randen",
+   "beeld": {
+    "src": "/foto/materialen-muren.jpg",
+    "breed": 1600,
+    "hoog": 900,
+    "alt": "Een gestapelde muur van ruwe natuursteen."
+   },
+   "materialen": [
+    {
+     "naam": "Stapelblokken",
+     "zin": "Voor een muurtje of verhoogde border; gekliefd, strak of getrommeld."
+    },
+    {
+     "naam": "Natuurstenen muurstenen",
+     "zin": "Losse stenen voor een stapelmuur, met plek voor planten in de kieren."
+    },
+    {
+     "naam": "Palissades en bielzen",
+     "zin": "Rechtop gezette paaltjes of balken om hoogteverschil op te vangen."
+    },
+    {
+     "naam": "L-elementen",
+     "zin": "Betonnen keerwanden voor een groot hoogteverschil."
+    },
+    {
+     "naam": "Traptreden",
+     "zin": "Massieve treden in beton of natuursteen."
+    },
+    {
+     "naam": "Steenkorven",
+     "zin": "Draadkorven vol steen: een muur die tegelijk schuilplek is voor egels en insecten."
+    },
+    {
+     "naam": "Opsluitbanden en kantopsluiting",
+     "zin": "Houden bestrating op zijn plek; in beton, natuursteen, cortenstaal of verzinkt staal."
+    },
+    {
+     "naam": "Cortenstaal borders",
+     "zin": "Een dunne roestbruine rand tussen gras en border."
+    },
+    {
+     "naam": "Plantenbakken",
+     "zin": "Vaste of modulaire bakken, ook als keerwand te gebruiken."
+    }
+   ]
+  },
+  {
+   "id": "afwerking",
+   "kop": "Licht en afwerking",
+   "beeld": {
+    "src": "/foto/materialen-afwerking.jpg",
+    "breed": 1600,
+    "hoog": 900,
+    "alt": "Een zwarte tuinspot die 's avonds aangaat."
+   },
+   "materialen": [
+    {
+     "naam": "Tuinverlichting",
+     "zin": "Spots, wandlampen en grondlampjes op laagspanning, veilig om zelf te verplaatsen."
+    },
+    {
+     "naam": "Voegzand en voegmiddel",
+     "zin": "Gewoon voegzand, of polymeer en epoxy waar geen onkruid meer doorheen komt."
+    },
+    {
+     "naam": "Tegeldragers",
+     "zin": "Stelpootjes om tegels op te leggen, bijvoorbeeld op een dak of boven leidingen."
+    },
+    {
+     "naam": "Onderhoudsmiddelen",
+     "zin": "Om tegels en steen schoon te houden en te beschermen."
+    }
+   ]
+  }
+ ]
+}

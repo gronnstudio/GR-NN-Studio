@@ -75,8 +75,12 @@
 .dag-tijd { font-size: clamp(4.5rem, 2rem + 10vw, 13rem); line-height: 0.8; letter-spacing: -0.05em; opacity: 0.13; margin-bottom: -0.22em; }
 .dag-zin { max-width: 44ch; }
 .dag-vakken { margin-top: 28px; border-top: 1px solid currentColor; }
-.dag-vakken li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--lijn); font-weight: 600; }
-.dag-vakken li .dag-mono { opacity: 0.75; text-align: right; }
+.dag-vakken li { border-bottom: 1px solid var(--lijn); font-weight: 600; }
+.dag-vakken a { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 14px 0; min-height: var(--raak); transition: padding 240ms var(--ease); }
+.dag-vakken a:hover { padding-left: 8px; }
+.dag-vakken .dag-mono { opacity: 0.75; text-align: right; }
+.dag-lees { display: inline-flex; align-items: center; min-height: var(--raak); margin-top: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.dag-lees:hover { text-decoration-thickness: 2px; }
 figure figcaption { margin-top: 10px; }
 
 /* Vakken op een rij */
@@ -97,7 +101,25 @@ figure figcaption { margin-top: 10px; }
 .dag-poort-kop { font-size: clamp(2.6rem, 1rem + 7.5vw, 9.5rem); line-height: 0.92; letter-spacing: -0.045em; max-width: 12ch; }
 .dag-knoppen { display: flex; flex-wrap: wrap; gap: 10px; }
 
-.dag-voet { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 24px var(--g) calc(96px + env(safe-area-inset-bottom)); border-top: 1px solid var(--lijn); }
+/* Voet */
+.dag-voet { padding: clamp(40px, 6vw, 72px) var(--g) calc(96px + env(safe-area-inset-bottom)); background: var(--antraciet); color: var(--creme); --zacht: rgb(243 238 228 / 0.62); }
+.dag-voet-rij { display: grid; gap: 28px; }
+.dag-voet-zin { font: 700 clamp(1.3rem, 1rem + 1.4vw, 2.2rem)/1.15 var(--letter-kop); letter-spacing: -0.02em; max-width: 22ch; }
+.dag-voet-links a { display: inline-flex; min-height: 40px; align-items: center; }
+.dag-voet-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.dag-voet-onder { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgb(243 238 228 / 0.2); }
+.dag-voet-onder a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Menu op de telefoon */
+.dag-blad { position: fixed; inset: 0; z-index: 50; overflow-y: auto; background: var(--creme); color: var(--inkt); padding: 16px var(--g) 40px; display: grid; align-content: start; gap: 28px; }
+.dag-blad[hidden] { display: none; }
+.dag-blad-kop { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.dag-blad-paginas a { display: block; padding: 6px 0; font: 700 clamp(2rem, 1rem + 6vw, 3.2rem)/1.05 var(--letter-kop); letter-spacing: -0.035em; }
+.dag-blad-dag { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.dag-blad-dag a { display: grid; gap: 4px; min-height: 76px; align-content: end; padding: 12px; font-weight: 600; }
+.dag-blad-ochtend a { background: var(--creme-diep); } .dag-blad-middag a { background: var(--papier); border: 1px solid var(--lijn); }
+.dag-blad-avond a { background: var(--steen); } .dag-blad-nacht a { background: var(--antraciet); color: var(--creme); }
+.dag-blad-nacht .dag-zacht { color: rgb(243 238 228 / 0.62); }
 
 /* Duimbalk op de telefoon */
 .dag-duim {
@@ -115,15 +137,18 @@ figure figcaption { margin-top: 10px; }
 
 @media (min-width: 900px) {
   .dag-duim { display: none; }
-  .dag-voet { padding-bottom: 24px; }
-  .dag-kop { display: grid; grid-template-columns: 1fr auto 1fr; }
-  .dag-klok { display: block; text-align: center; }
+  .dag-voet { padding-bottom: 32px; }
+  .dag-voet-rij { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--g); }
+  .dag-voet-zin { grid-column: 1 / span 6; }
+  .dag-voet-links:nth-of-type(1) { grid-column: 8 / span 2; }
+  .dag-voet-links:nth-of-type(2) { grid-column: 10 / -1; }
   .dag-nav { display: block; justify-self: end; }
   .dag-nav ul { display: flex; align-items: center; gap: 4px; }
   .dag-nav a { display: inline-flex; align-items: center; min-height: var(--raak); padding: 0 12px; font: 500 0.75rem var(--letter-mono); letter-spacing: 0.08em; text-transform: uppercase; }
   .dag-nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
-  .dag-kop { grid-template-columns: auto 1fr auto auto; }
+  .dag-kop { display: grid; grid-template-columns: auto 1fr auto auto; }
   .dag-kop-knop { margin-left: 8px; }
+  .dag-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 
   .dag-opening-onder { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
   .dag-lead { grid-column: 1 / span 6; }
@@ -174,6 +199,10 @@ figure figcaption { margin-top: 10px; }
     .dag-zie { animation: dag-binnen linear both; animation-timeline: view(); animation-range: entry 0% entry 30%; }
   }
 }
+@media (min-width: 1200px) {
+  .dag-klok { display: block; text-align: center; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dag-uur, .dag-knop, .dag-index a { transition: none; }
 }
